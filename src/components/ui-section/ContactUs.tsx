@@ -30,8 +30,10 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
+      console.log("Submitting form data:", formData);
       const res = await axios.post(
-        "https://skella.riyadvisoftwaretechnologies.com/contact.php",
+        // "https://www.rayzenpower.com/contact.php",
+        "/api/contact",
         formData,
         {
           headers: {

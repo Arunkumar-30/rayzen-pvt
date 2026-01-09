@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SolarPower() {
   return (
@@ -13,9 +14,9 @@ export default function SolarPower() {
             Solar Power Installation
           </h2>
 
-          <button className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
+        <Link href="/contact-us" className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
             Enquire Now
-          </button>
+          </Link>
         </div>
 
         <h3 className="text-lg font-medium text-gray-700 ml-3" data-aos="fade-up">
@@ -27,7 +28,7 @@ export default function SolarPower() {
           {/* Image */}
           <div className="flex-1 space-y-5" data-aos="zoom-in">
             <Image
-              src={"/service/solar-power.jpg"} // replace with your solar image
+              src={"/service/solar-power.webp"} // replace with your solar image
               width={600}
               height={300}
               className="object-contain"
@@ -43,34 +44,34 @@ export default function SolarPower() {
             <p className="text-lg text-gray-600">
               Harness the power of the sun to reduce your electricity bills and carbon footprint. Our solar installation services ensure optimal panel placement, efficient energy storage, and long-lasting performance.
             </p>
-          <ul className="space-y-4" data-aos="fade-up">
-  {[
-    "Customized solar solutions for homes and businesses",
-    "Efficient installation with optimized energy output",
-    "Long-term savings and sustainable energy practices",
-  ].map((text, i) => (
-    <li
-      key={i}
-      className="flex items-start bg-[#FDE8E8] border border-[#E91414] p-5 rounded-lg"
-    >
-      <span className="mr-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#E91414] text-white">
-        <svg
-          aria-hidden="true"
-          className="w-4 h-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          fill="currentColor"
-        >
-          <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-        </svg>
-      </span>
+            <ul className="space-y-4" data-aos="fade-up">
+              {[
+                "Customized solar solutions for homes and businesses",
+                "Efficient installation with optimized energy output",
+                "Long-term savings and sustainable energy practices",
+              ].map((text, i) => (
+                <li
+                  key={i}
+                  className="flex items-start bg-[#FDE8E9] p-5"
+                >
+                  <span className="mr-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#E91414] text-white">
+                    <svg
+                      aria-hidden="true"
+                      className="w-4 h-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                    >
+                      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
+                    </svg>
+                  </span>
 
-      <span className="text-gray-800 font-medium">
-        {text}
-      </span>
-    </li>
-  ))}
-</ul>
+                  <span className="text-gray-800 font-medium">
+                    {text}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
           </div>
         </div>
@@ -83,26 +84,26 @@ export default function SolarPower() {
           >
             Why Choose Us for Solar Power Installation?
           </h2>
-       <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
-  {[
-    "High-Quality Solar Panels",
-    "Expert Installation by Certified Technicians",
-    "24/7 Maintenance Support",
-    "Optimized Energy Output",
-    "Sustainable & Eco-Friendly Solutions",
-    "Cost-Effective and Long-Term Savings",
-  ].map((text, index) => (
-    <div
-      key={index}
-      data-aos="zoom-in"
-      className="bg-[#FDE8E8] border border-[#E91414] p-6 rounded-xl shadow-sm flex items-center justify-center text-center hover:shadow-md transition"
-    >
-      <p className="text-lg font-semibold text-[#8A0E0E]">
-        {text}
-      </p>
-    </div>
-  ))}
-</div>
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
+            {[
+              "High-Quality Solar Panels",
+              "Expert Installation by Certified Technicians",
+              "24/7 Maintenance Support",
+              "Optimized Energy Output",
+              "Sustainable & Eco-Friendly Solutions",
+              "Cost-Effective and Long-Term Savings",
+            ].map((text, index) => (
+              <div
+                key={index}
+                data-aos="zoom-in"
+                className="bg-[#FDE8E8] border border-[#E91414] p-6  shadow-sm flex items-center justify-center text-center hover:shadow-md transition"
+              >
+                <p className="text-lg font-semibold text-[#8A0E0E]">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
 
         </div>
 

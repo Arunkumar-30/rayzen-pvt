@@ -22,12 +22,10 @@ const BannerSlider = () => {
               data-aos-duration="2000"
             >
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Build, Grow & Transform Your Business with Digital Solutions
-                That Work
+             Power Your Home & Business with Smart Solar Solutions
               </h1>
               <p className="text-sm sm:text-lg leading-relaxed">
-                From custom websites to high-converting ad campaigns — we help
-                startups and businesses go digital the smart way.
+             From efficient solar panel installations to advanced energy storage systems — we help homes and businesses harness clean, reliable, and cost-saving solar energy.
               </p>
               <div className="flex justify-start">
                 <Link
@@ -56,7 +54,7 @@ const BannerSlider = () => {
               data-aos-duration="2000"
             >
               <Image
-                src="/home/img3.png"
+                src="/home/img3.webp"
                 width={600}
                 height={600}
                 alt="lap-home"

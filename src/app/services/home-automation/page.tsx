@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomeAutomation() {
   return (
@@ -13,13 +14,15 @@ export default function HomeAutomation() {
             Home Automation Solutions
           </h2>
 
-          <button className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
+         <Link href="/contact-us" className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
             Enquire Now
-          </button>
+          </Link>
         </div>
 
         <h3 className="text-lg font-medium text-gray-700 ml-3" data-aos="fade-up">
-          Transform your living space with smart home automation systems. Control lighting, security, climate, entertainment, and appliances seamlessly from a single interface for comfort, convenience, and energy efficiency.
+          Experience smarter living with advanced home automation systems designed
+          to enhance comfort, security, and energy efficiency. Control lighting,
+          appliances, climate, and security from anywhere with ease.
         </h3>
 
         {/* Image + Details */}
@@ -27,11 +30,11 @@ export default function HomeAutomation() {
           {/* Image */}
           <div className="flex-1 space-y-5" data-aos="zoom-in">
             <Image
-              src={"/service/home-automation.jpg"} // replace with your image
+              src={"/service/home-automation.webp"}
               width={600}
               height={300}
-              className="object-contain "
-              alt="Home Automation System"
+              className="object-contain"
+              alt="Smart Home Automation System"
             />
           </div>
 
@@ -41,63 +44,37 @@ export default function HomeAutomation() {
               Why Choose Home Automation
             </h3>
             <p className="text-lg text-gray-600">
-              Enjoy a smarter, safer, and more energy-efficient home. Our home automation solutions offer remote control, scheduling, and automation features that make everyday tasks effortless while saving energy and enhancing security.
+              Transform your home into a smart living space with seamless control
+              over lighting, security, climate, and entertainment. Our automation
+              solutions improve convenience, safety, and energy efficiency.
             </p>
             <ul className="space-y-4" data-aos="fade-up">
-              <li className="flex items-start bg-[#afcb2045] p-5">
-                <span className="text-blue-500 mr-4">
-                  <svg
-                    aria-hidden="true"
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    fill="currentColor"
-                  >
-                    <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="text-sm font-semibold text-gray-700">
-                    Seamless control of lights, climate, and appliances
+              {[
+                "Centralized control of lights, appliances, and devices",
+                "Enhanced security with smart locks and surveillance",
+                "Energy-efficient automation for reduced power consumption",
+              ].map((text, i) => (
+                <li
+                  key={i}
+                  className="flex items-start bg-[#FDE8E9] p-5"
+                >
+                  <span className="mr-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#E91414] text-white">
+                    <svg
+                      aria-hidden="true"
+                      className="w-4 h-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                    >
+                      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
+                    </svg>
                   </span>
-                </div>
-              </li>
-              <li className="flex items-start bg-[#afcb2045] p-5">
-                <span className="text-blue-500 mr-4">
-                  <svg
-                    aria-hidden="true"
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    fill="currentColor"
-                  >
-                    <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="text-sm font-semibold text-gray-700">
-                    Energy-efficient automation for reduced electricity bills
+
+                  <span className="text-gray-800 font-medium">
+                    {text}
                   </span>
-                </div>
-              </li>
-              <li className="flex items-start bg-[#afcb2045] p-5">
-                <span className="text-blue-500 mr-4">
-                  <svg
-                    aria-hidden="true"
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    fill="currentColor"
-                  >
-                    <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="text-sm font-semibold text-gray-700">
-                    Enhanced home security with smart monitoring and alerts
-                  </span>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -110,132 +87,82 @@ export default function HomeAutomation() {
           >
             Why Choose Us for Home Automation?
           </h2>
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 p-4">
-            <div className="bg-[#FFFBE6] border border-yellow-600 p-6 rounded shadow flex items-center justify-center text-center" data-aos="zoom-in">
-              <p className="text-lg font-medium text-gray-700">
-                Smart Lighting & Climate Control
-              </p>
-            </div>
-
-            <div className="bg-[#EDEFFE] border border-blue-600 p-6 rounded shadow flex items-center justify-center text-center" data-aos="zoom-in">
-              <p className="text-lg font-medium text-gray-700">
-                Remote Monitoring & Control
-              </p>
-            </div>
-
-            <div className="bg-[#EDEFFE] border border-blue-600 p-6 rounded shadow flex items-center justify-center text-center" data-aos="zoom-in">
-              <p className="text-lg font-medium text-gray-700">
-                Enhanced Security Systems
-              </p>
-            </div>
-
-            <div className="bg-[#FFFBE6] border border-yellow-600 p-6 rounded shadow flex items-center justify-center text-center" data-aos="zoom-in">
-              <p className="text-lg font-medium text-gray-700">
-                Energy Efficiency & Savings
-              </p>
-            </div>
-
-            <div className="bg-[#FFFBE6] border border-yellow-600 p-6 rounded shadow flex items-center justify-center text-center" data-aos="zoom-in">
-              <p className="text-lg font-medium text-gray-700">
-                Seamless Integration with Existing Devices
-              </p>
-            </div>
-
-            <div className="bg-[#EDEFFE] border border-blue-600 p-6 rounded shadow flex items-center justify-center text-center" data-aos="zoom-in">
-              <p className="text-lg font-medium text-gray-700">
-                Personalized Automation Schedules
-              </p>
-            </div>
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
+            {[
+              "Smart & User-Friendly Automation Systems",
+              "Expert Installation & Integration",
+              "24/7 Technical Support",
+              "Energy-Saving Smart Solutions",
+              "Advanced Security & Monitoring",
+              "Custom Automation for Every Home",
+            ].map((text, index) => (
+              <div
+                key={index}
+                data-aos="zoom-in"
+                className="bg-[#FDE8E8] border border-[#E91414] p-6 shadow-sm flex items-center justify-center text-center hover:shadow-md transition"
+              >
+                <p className="text-lg font-semibold text-[#8A0E0E]">
+                  {text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Core Components / Implementation Process */}
+        {/* Core Components / Process */}
         <div className="w-full mt-10 mb-10">
           <h2
             className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
             data-aos="fade-up"
           >
-            Core Steps of Our Home Automation Program
+            Core Steps of Our Home Automation Process
           </h2>
           <div className="justify-center gap-20 items-start lg:flex-row flex-col space-y-6 py-5">
-            {/* Consultation */}
+            {/* Planning */}
             <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
               <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Consultation & Planning
+                Requirement Analysis
               </h2>
               <p className="text-lg text-gray-600">
-                Assess your home requirements and design a smart home automation plan tailored to your lifestyle.
+                Understanding your lifestyle and automation needs to design the
+                perfect smart home solution.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Identify devices and systems for automation
-                  </span>
-                </li>
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Determine energy-saving opportunities
-                  </span>
-                </li>
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Plan secure and efficient system integration
-                  </span>
-                </li>
+                <li><span className="text-lg font-semibold text-gray-700">Room-by-room automation planning</span></li>
+                <li><span className="text-lg font-semibold text-gray-700">Device compatibility assessment</span></li>
+                <li><span className="text-lg font-semibold text-gray-700">Customized automation strategy</span></li>
               </ul>
             </div>
 
             {/* Installation */}
             <div className="space-y-6 p-5" data-aos="fade-up">
               <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Installation
+                Installation & Setup
               </h2>
               <p className="text-lg text-gray-600">
-                Set up smart devices, hubs, sensors, and controllers for seamless home automation.
+                Professional installation of smart devices, controllers, and
+                automation hubs.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Device configuration and integration
-                  </span>
-                </li>
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Network setup and connectivity checks
-                  </span>
-                </li>
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    System testing for smooth operation
-                  </span>
-                </li>
+                <li><span className="text-lg font-semibold text-gray-700">Smart lighting and appliance setup</span></li>
+                <li><span className="text-lg font-semibold text-gray-700">Security and surveillance integration</span></li>
+                <li><span className="text-lg font-semibold text-gray-700">System testing and configuration</span></li>
               </ul>
             </div>
 
             {/* Support */}
             <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
               <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Support & Optimization
+                Support & Maintenance
               </h2>
               <p className="text-lg text-gray-600">
-                Ensure your home automation system continues to function efficiently and adapt to your changing needs.
+                Continuous support to ensure your smart home runs smoothly and
+                securely.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Regular software updates and troubleshooting
-                  </span>
-                </li>
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Energy usage monitoring and optimization
-                  </span>
-                </li>
-                <li>
-                  <span className="text-lg font-semibold text-gray-700">
-                    Personalized schedules and automation adjustments
-                  </span>
-                </li>
+                <li><span className="text-lg font-semibold text-gray-700">Software updates and monitoring</span></li>
+                <li><span className="text-lg font-semibold text-gray-700">Quick troubleshooting assistance</span></li>
+                <li><span className="text-lg font-semibold text-gray-700">Future upgrades and expansion</span></li>
               </ul>
             </div>
           </div>

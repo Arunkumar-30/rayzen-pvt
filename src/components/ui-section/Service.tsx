@@ -11,27 +11,27 @@ const services = [
   {
     title: "Solar Power Installation",
     desc: "Custom solar power solutions for homes and businesses to generate clean energy. Reduce electricity bills and enjoy long-term sustainable savings.",
-    img: "/service/solar.jpg",
+    img: "/service/solar.webp",
   },
   {
     title: "Home Automation",
     desc: "Smart home solutions to control lighting, appliances, and security effortlessly. Enhance comfort, safety, and energy efficiency with automation.",
-    img: "/service/home.jpg",
+    img: "/service/home.webp",
   },
   {
     title: "Hybrid Systems",
     desc: "Reliable hybrid systems combining solar, grid, and battery power. Ensure uninterrupted electricity with intelligent power management.",
-    img: "/service/hybrid.jpg",
+    img: "/service/hybrid.webp",
   },
   {
     title: "Lithium ESS",
     desc: "Advanced lithium energy storage for efficient power backup and usage. Store excess solar energy and use it anytime you need.",
-    img: "/service/lithium.jpg",
+    img: "/service/lithium.webp",
   },
   {
     title: "CCTV Security Cameras",
     desc: "High-quality CCTV solutions for round-the-clock monitoring and protection. Secure your home and business with advanced surveillance systems.",
-    img: "/service/cctv.jpg",
+    img: "/service/cctv.webp",
   },
 ];
 

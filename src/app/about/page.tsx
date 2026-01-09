@@ -92,7 +92,7 @@ const About = () => {
             data-aos-duration="2000"
           >
             <img
-              src="/home/img3.png"
+              src="/home/img3.webp"
               alt="Rayzen Power solar solutions"
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
             />

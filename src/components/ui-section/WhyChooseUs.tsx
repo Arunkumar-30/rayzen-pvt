@@ -60,22 +60,22 @@ const WhyChooseUs = () => {
 
         {[
           {
-            icon: "/home/number-1.png",
+            icon: "/home/number-1.webp",
             title: "Complete Solar Power Ecosystem",
             desc: "High-efficiency solar panels, advanced inverters, and long-lasting batteries—all from one trusted provider.",
           },
           {
-            icon: "/home/number-2.png",
+            icon: "/home/number-2.webp",
             title: "Custom Solutions for Every Need",
             desc: "Tailor-made solar systems for homes, businesses, and industries based on space, usage, and budget.",
           },
           {
-            icon: "/home/number-3.png",
+            icon: "/home/number-3.webp",
             title: "Cutting-Edge & Reliable Technology",
             desc: "Premium products backed by strong after-sales support and expert service.",
           },
           {
-            icon: "/home/number-4.png",
+            icon: "/home/number-4.webp",
             title: "Maximum Savings & Sustainability",
             desc: "Reduce electricity bills, lower grid dependency, and contribute to a cleaner environment.",
           },
