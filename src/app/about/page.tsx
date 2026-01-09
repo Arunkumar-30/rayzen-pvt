@@ -1,4 +1,5 @@
 import CommonBannerComponent from "@/components/ui-section/CommonBanner";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -91,10 +92,14 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <img
+            <Image
               src="/home/img3.webp"
               alt="Rayzen Power solar solutions"
+              width={500}
+              height={500}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              priority
+
             />
           </div>
         </div>

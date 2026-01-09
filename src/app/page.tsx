@@ -14,9 +14,11 @@ export default function Home() {
   <FaqAccordion/>
          {/* Full-width section image */}
        <section className=" w-full h-full">
-          <img 
+          <Image 
             src="/home/img2.webp" 
             alt="brand logos" 
+            width={1920} 
+            height={300}
             className="w-full h-full object-cover"
           />
        </section>

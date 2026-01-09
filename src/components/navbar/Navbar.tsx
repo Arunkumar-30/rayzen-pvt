@@ -39,7 +39,8 @@ const NavbarComponent = () => {
               width={100}
               height={100}
               className="object-contain"
-              alt="Brand Logo"
+              priority
+              alt="Rayzen Power Logo"
             />
           </Link>
 

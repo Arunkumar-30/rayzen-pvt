@@ -90,7 +90,7 @@ const FooterComponent = () => {
 
       <li className="p-2 text-[18px]">
         <Link
-          href="https://www.facebook.com/riyadvisoftwaretech"
+          href="#"
           target="_blank"
           className="hover:text-[#E91414]"
         >

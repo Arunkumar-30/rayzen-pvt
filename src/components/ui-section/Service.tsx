@@ -6,32 +6,38 @@ import HeadingComponent from "./Heading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
+import { link } from "fs";
 
 const services = [
   {
     title: "Solar Power Installation",
     desc: "Custom solar power solutions for homes and businesses to generate clean energy. Reduce electricity bills and enjoy long-term sustainable savings.",
     img: "/service/solar.webp",
+    link: "/services/solar-power-installation",
   },
   {
     title: "Home Automation",
     desc: "Smart home solutions to control lighting, appliances, and security effortlessly. Enhance comfort, safety, and energy efficiency with automation.",
     img: "/service/home.webp",
+    link: "/services/home-automation",
   },
   {
     title: "Hybrid Systems",
     desc: "Reliable hybrid systems combining solar, grid, and battery power. Ensure uninterrupted electricity with intelligent power management.",
     img: "/service/hybrid.webp",
+    link: "/services/hybrid-systems",
   },
   {
     title: "Lithium ESS",
     desc: "Advanced lithium energy storage for efficient power backup and usage. Store excess solar energy and use it anytime you need.",
     img: "/service/lithium.webp",
+    link: "/services/lithium-ess",
   },
   {
     title: "CCTV Security Cameras",
     desc: "High-quality CCTV solutions for round-the-clock monitoring and protection. Secure your home and business with advanced surveillance systems.",
     img: "/service/cctv.webp",
+    link: "/services/cctv-security",
   },
 ];
 
@@ -110,7 +116,7 @@ const Service = () => {
                   {service.desc}
                 </p>
  <Link
-        href="/about"
+        href={service.link}
         className="inline-flex items-center gap-3 rounded-full bg-[#E91414] px-6 py-3 text-white text-sm font-medium transition-all duration-300 hover:bg-[#C70F0F] group"
         data-aos="fade-up"
         data-aos-duration="2000"
