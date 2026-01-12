@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import HeadingComponent from "./Heading";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
-import { link } from "fs";
+import Image from "next/image";
+
 
 const services = [
   {
@@ -105,7 +106,7 @@ const Service = () => {
             <SwiperSlide key={index}>
               <div className="bg-white rounded-xl p-6 shadow hover:shadow-xl transition h-full">
                 <div className="w-full h-48 mb-6 space-y-4 overflow-hidden">
-                  <img src={service.img} alt={service.title} className="w-full h-full object-cover rounded-lg" />
+                  <Image src={service.img} alt={service.title} width={350} height={350} className="w-full h-full object-cover rounded-lg" />
                 </div>
 
                 <h3 className="text-xl font-semibold mb-3">

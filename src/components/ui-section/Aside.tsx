@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 const pages = [
   { label: "Solar Power Installation", href: "/services/solar-power-installation" },
@@ -14,22 +13,15 @@ const pages = [
 
 export default function Aside() {
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <aside className="p-4 sticky top-28 border border-[#E91414] rounded-lg bg-white">
-  
-
       <ul className="space-y-2">
-        {pages.map((item, index) => {
-          const active = mounted && pathname === item.href;
+        {pages.map((item) => {
+          const active = pathname === item.href;
 
           return (
-            <li key={index}>
+            <li key={item.href}>
               <Link
                 href={item.href}
                 className={`block px-3 py-2 rounded-md transition

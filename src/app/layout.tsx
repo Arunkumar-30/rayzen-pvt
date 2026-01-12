@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -15,26 +16,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rayzen Power Private Limited",
-  description: "Leading Manufacturer of High-Quality Power Solutions in India",
+  title: {
+    default: "Rayzen Power Private Limited",
+    template: "%s | Rayzen Power Private Limited",
+  },
+  description:
+    "Rayzen Power Private Limited is a leading manufacturer of high-quality power solutions in India.",
+  icons: {
+    icon: "/fav.png",
+  },
+  metadataBase: new URL("https://www.rayzenpower.com"), // change to your domain
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/fav.png" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavbarComponent/>
+        <NavbarComponent />
         {children}
-        <FooterComponent/>
+        <FooterComponent />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import CommonBannerComponent from "./CommonBanner";
 import axios from "axios";
+import Image from "next/image";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -14,7 +15,8 @@ export default function ContactSection() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<string | null>(null);
+
+
   console.log(loading);
 
   const handleChange = (
@@ -141,11 +143,13 @@ export default function ContactSection() {
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              <img
-                src="/logo/Logo.jpg"
-                alt="Rayzen Power Logo"
-                className="w-24 h-full rounded-full object-cover"
-              />
+               <Image
+    src="/logo/Logo.jpg"
+    alt="Rayzen Power Logo"
+    width={96}
+    height={96}
+    className="rounded-full object-cover"
+  />
               <div>
                 <p
                   className="font-bold text-lg"
@@ -253,11 +257,11 @@ export default function ContactSection() {
               Submit
             </button>
 
-            {status && (
+            {/* {status && (
               <p className="text-sm text-center text-green-600 pt-2">
                 {status}
               </p>
-            )}
+            )} */}
           </form>
         </div>
       </section>

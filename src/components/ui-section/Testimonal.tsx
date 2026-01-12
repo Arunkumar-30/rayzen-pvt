@@ -16,35 +16,27 @@ export default function TestimonialSlider() {
     {
       name: "Arunkumar",
       role: "Frontend Developer",
-      text:
-        "Rayzen Power delivered excellent solar solutions with professional installation and great after-sales support.",
+      text: "Rayzen Power delivered excellent solar solutions with professional installation and great after-sales support.",
     },
     {
       name: "Suresh",
       role: "Business Owner",
-      text:
-        "Highly satisfied with inverter installation. Reduced electricity cost significantly.",
+      text: "Highly satisfied with inverter installation. Reduced electricity cost significantly.",
     },
     {
       name: "Karthik",
       role: "Home Owner",
-      text:
-        "The solar panel quality is top-notch. Team explained everything clearly.",
+      text: "The solar panel quality is top-notch. Team explained everything clearly.",
     },
   ];
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-
       {/* Heading + Arrows */}
       <div className="flex items-center justify-between mb-10">
         <div>
-          <p className="text-sm font-bold uppercase text-[#E91414]">
-            Testimonials
-          </p>
-          <h2 className="text-3xl font-semibold text-black">
-            What Our Clients Say
-          </h2>
+          <p className="text-sm font-bold uppercase text-[#E91414]">Testimonials</p>
+          <h2 className="text-3xl font-semibold text-black">What Our Clients Say</h2>
         </div>
 
         <div className="flex gap-3">
@@ -69,30 +61,19 @@ export default function TestimonialSlider() {
         loop
         spaceBetween={24}
         autoplay={{ delay: 4000 }}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-        }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
+        breakpoints={{ 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 } }}
         onBeforeInit={(swiper: SwiperType) => {
-          if (!swiper.params.navigation) {
-            swiper.params.navigation = {};
-          }
-
-          const navigation = swiper.params.navigation;
-          if (typeof navigation === 'object') {
-            navigation.prevEl = prevRef.current;
-            navigation.nextEl = nextRef.current;
+          // assign refs to Swiper navigation here
+          if (typeof swiper.params.navigation === "object") {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
           }
         }}
+        navigation // just enable it; refs are handled in onBeforeInit
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index} className="flex justify-center">
             <div className="bg-white border border-[#E91414] rounded-xl p-6 max-w-[580px] flex gap-4">
-
               <Image
                 src="/home/man.webp"
                 alt="Client"
@@ -100,7 +81,6 @@ export default function TestimonialSlider() {
                 height={150}
                 className="w-28 h-28 rounded-lg object-cover"
               />
-
               <div>
                 <div className="flex items-center gap-4">
                   <h3 className="font-semibold text-lg">{item.name}</h3>
@@ -109,13 +89,7 @@ export default function TestimonialSlider() {
 
                 <div className="flex gap-1 my-2">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Image
-                      key={s}
-                      src="/home/star.webp"
-                      alt="star"
-                      width={18}
-                      height={18}
-                    />
+                    <Image key={s} src="/home/star.webp" alt="star" width={18} height={18} />
                   ))}
                 </div>
 

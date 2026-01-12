@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const WhyChooseUs = () => {
@@ -86,9 +87,11 @@ const WhyChooseUs = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <img
+            <Image
               src={item.icon}
               alt={item.title}
+              width={64}
+              height={64}
               className="w-16 h-16 mb-4"
             />
 
