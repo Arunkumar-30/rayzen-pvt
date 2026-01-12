@@ -39,20 +39,24 @@ export default function TestimonialSlider() {
           <h2 className="text-3xl font-semibold text-black">What Our Clients Say</h2>
         </div>
 
-        <div className="flex gap-3">
-          <button
-            ref={prevRef}
-            className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#E91414] hover:text-white"
-          >
-            ❮
-          </button>
-          <button
-            ref={nextRef}
-            className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#E91414] hover:text-white"
-          >
-            ❯
-          </button>
-        </div>
+       <div className="flex gap-3">
+  <button
+    ref={prevRef}
+    className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#E91414] hover:text-white"
+  >
+    <span className="sr-only">Previous slide</span>
+    ❮
+  </button>
+
+  <button
+    ref={nextRef}
+    className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#E91414] hover:text-white"
+  >
+    <span className="sr-only">Next slide</span>
+    ❯
+  </button>
+</div>
+
       </div>
 
       {/* Swiper */}

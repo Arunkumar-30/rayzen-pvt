@@ -51,42 +51,60 @@ const Service = () => {
         {/* Heading + Navigation */}
         <div className="flex items-center justify-between mb-12">
           <div>
-            <p className="text-sm font-bold uppercase text-[#E91414]">
-              Complete Solar Solutions
-            </p>
-            <h2 className="text-3xl font-semibold text-white">
-              Installation, Maintenance & Support
-            </h2>
-          </div>
+    <p className="text-sm font-bold uppercase text-white/80 tracking-wide">
+      Complete Solar Solutions
+    </p>
 
-          {/* Custom Arrows */}
-          <div className="flex gap-3">
-            <button className="service-prev w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#E91414] group transition">
-              <svg
-                className="w-5 h-5 text-black group-hover:text-white"
-                fill="none"
-                stroke="currentColor"
-                aria-hidden="true"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+    <span className="inline-block my-2 h-[3px] w-12 bg-[#E91414]" />
 
-            <button className="service-next w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#E91414] group transition">
-              <svg
-                className="w-5 h-5 text-black group-hover:text-white"
-                fill="none"
-                aria-hidden="true"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+    <h2 className="text-3xl font-semibold text-white">
+      Installation, Maintenance & Support
+    </h2>
+  </div>
+
+       {/* Custom Arrows */}
+<div className="flex gap-3">
+  <button
+    className="service-prev w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#E91414] group transition"
+    aria-label="Previous service"
+  >
+    <svg
+      className="w-5 h-5 text-black group-hover:text-white"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden="true"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 19l-7-7 7-7"
+      />
+    </svg>
+  </button>
+
+  <button
+    className="service-next w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#E91414] group transition"
+    aria-label="Next service"
+  >
+    <svg
+      className="w-5 h-5 text-black group-hover:text-white"
+      fill="none"
+      aria-hidden="true"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 5l7 7-7 7"
+      />
+    </svg>
+  </button>
+</div>
+
         </div>
 
         {/* Slider */}

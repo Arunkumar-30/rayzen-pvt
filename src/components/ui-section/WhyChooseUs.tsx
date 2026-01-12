@@ -82,29 +82,28 @@ const WhyChooseUs = () => {
             desc: "Reduce electricity bills, lower grid dependency, and contribute to a cleaner environment.",
           },
         ].map((item, index) => (
-          <div
-            key={index}
-            className="h-full bg-white p-6 rounded-xl border border-[#E91414] hover:border-[#C70F0F] shadow-md hover:shadow-xl transition-all duration-300"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            <Image
-              src={item.icon}
-              alt={item.title}
-              width={64}
-              height={64}
-              priority
-              className="w-16 h-16 mb-4"
-            />
+         <div
+    key={index}
+    className="h-full bg-white p-6 rounded-xl border border-[#E91414] hover:border-[#C70F0F] shadow-md hover:shadow-xl transition-all duration-300"
+    data-aos="fade-up"
+    data-aos-duration="2000"
+  >
+    <Image
+      src={item.icon}
+      alt={item.title}
+      width={64}
+      height={64}
+      className="w-16 h-16 mb-4"
+    />
 
-            <h4 className="text-lg sm:text-xl font-semibold mb-2">
-              {item.title}
-            </h4>
+    <h3 className="text-lg sm:text-xl font-semibold mb-2">
+      {item.title}
+    </h3>
 
-            <p className="text-[#585858] text-sm sm:text-base leading-relaxed">
-              {item.desc}
-            </p>
-          </div>
+    <p className="text-[#585858] text-sm sm:text-base leading-relaxed">
+      {item.desc}
+    </p>
+  </div>
         ))}
 
       </div>

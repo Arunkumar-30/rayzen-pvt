@@ -70,7 +70,7 @@ const FooterComponent = () => {
             and embrace sustainable power.
           </p>
 
-          <ul className="flex gap-4 pt-4">
+            <ul className="flex gap-4 pt-4">
             <li>
               <Link className="hover:text-[#E91414]" href="https://x.com/rayzenpower" target="_blank">
                 <FaXTwitter />

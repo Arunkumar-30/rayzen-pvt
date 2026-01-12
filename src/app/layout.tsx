@@ -59,18 +59,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+ <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav  aria-label="Main navigation">
-
-        <NavbarComponent />
+        {/* Main Navigation */}
+        <nav aria-label="Main navigation">
+          <NavbarComponent />
         </nav>
-        {children}
-        
+
+        {/* Main Content Landmark */}
+        <main id="main-content" role="main">
+          {children}
+        </main>
+
+        {/* Footer */}
         <footer aria-label="Footer">
-        <FooterComponent />
+          <FooterComponent />
         </footer>
       </body>
     </html>
