@@ -79,6 +79,7 @@ export default function TestimonialSlider() {
                 alt="Client"
                 width={150}
                 height={150}
+                priority
                 className="w-28 h-28 rounded-lg object-cover"
               />
               <div>
@@ -89,7 +90,7 @@ export default function TestimonialSlider() {
 
                 <div className="flex gap-1 my-2">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Image key={s} src="/home/star.webp" alt="star" width={18} height={18} />
+                    <Image key={s} src="/home/star.webp" priority alt="star" width={18} height={18} />
                   ))}
                 </div>
 

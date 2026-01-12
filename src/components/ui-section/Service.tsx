@@ -66,6 +66,7 @@ const Service = () => {
                 className="w-5 h-5 text-black group-hover:text-white"
                 fill="none"
                 stroke="currentColor"
+                aria-hidden="true"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >
@@ -77,6 +78,7 @@ const Service = () => {
               <svg
                 className="w-5 h-5 text-black group-hover:text-white"
                 fill="none"
+                aria-hidden="true"
                 stroke="currentColor"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
@@ -106,7 +108,12 @@ const Service = () => {
             <SwiperSlide key={index}>
               <div className="bg-white rounded-xl p-6 shadow hover:shadow-xl transition h-full">
                 <div className="w-full h-48 mb-6 space-y-4 overflow-hidden">
-                  <Image src={service.img} alt={service.title} width={350} height={350} className="w-full h-full object-cover rounded-lg" />
+                  <Image src={service.img} 
+                  alt={service.title}
+                   width={350} 
+                   height={350} 
+                   priority
+                   className="w-full h-full object-cover rounded-lg" />
                 </div>
 
                 <h3 className="text-xl font-semibold mb-3">
@@ -124,6 +131,7 @@ const Service = () => {
       >
         <svg
           viewBox="0 0 24 24"
+          aria-hidden="true"
           className="w-5 h-5 transition-transform duration-300 group-hover:rotate-45"
           fill="currentColor"
         >

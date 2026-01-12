@@ -34,6 +34,7 @@ const BannerSlider = () => {
                   className="group rounded-full duration-500 text-white p-3 bg-black w-[230px] flex items-center border hover:border-white hover:bg-[#C70F0F] justify-center gap-4 text-sm ">
                   <svg
                     stroke="currentColor"
+                    aria-hidden="true"
                     fill="currentColor"
                     strokeWidth="0"
                     viewBox="0 0 24 24"
@@ -58,7 +59,7 @@ const BannerSlider = () => {
                 src="/home/img3.webp"
                 width={600}
                 height={600}
-                alt="lap-home"
+                alt="Solar Panel Installation"
                 priority
                 className="object-contain w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px]"
               />

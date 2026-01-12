@@ -63,10 +63,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav  aria-label="Main navigation">
+
         <NavbarComponent />
+        </nav>
         {children}
         
+        <footer aria-label="Footer">
         <FooterComponent />
+        </footer>
       </body>
     </html>
   );

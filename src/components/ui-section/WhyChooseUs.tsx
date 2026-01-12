@@ -46,6 +46,7 @@ const WhyChooseUs = () => {
       >
         <svg
           viewBox="0 0 24 24"
+          aria-hidden="true"
           className="w-5 h-5 transition-transform duration-300 group-hover:rotate-45"
           fill="currentColor"
         >
