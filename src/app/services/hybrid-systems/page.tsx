@@ -1,7 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export default function NextHybridSystems() {
+export const metadata: Metadata = {
+  title: "Hybrid Power Systems - Rayzen Power",
+  description:
+    "Discover Rayzen Power's Hybrid Power Systems that combine solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
+  keywords:
+    "hybrid power system, solar hybrid system, hybrid inverter, battery storage, grid power backup, renewable energy, Rayzen Power",
+  openGraph: {
+    title: "Hybrid Power Systems - Rayzen Power",
+    description:
+      "Discover Rayzen Power's Hybrid Power Systems that combine solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
+    siteName: "Rayzen Power",
+    url: "https://rayzenpower.com/services/hybrid-systems",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "https://rayzenpower.com/service/hybrid-systems.webp",
+        width: 1200,
+        height: 630,
+        alt: "Hybrid Power System - Rayzen Power",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hybrid Power Systems - Rayzen Power",
+    description:
+      "Discover Rayzen Power's Hybrid Power Systems that combine solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
+    creator: "@RayzenPower",
+    images: ["https://rayzenpower.com/service/hybrid-systems.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
+export default function HybridSystems() {
   return (
     <>
       <div className="max-w-7xl mx-auto px-6 lg:px-30 mb-10 space-y-6">
@@ -20,7 +65,7 @@ export default function NextHybridSystems() {
         </div>
 
         <h3 className="text-lg font-medium text-gray-700 ml-3" data-aos="fade-up">
-          Experience uninterrupted power with next-generation hybrid systems that
+          Experience uninterrupted power with  hybrid systems that
           intelligently combine solar energy, battery storage, and grid power to
           deliver reliable, efficient, and cost-effective electricity.
         </h3>
@@ -33,8 +78,9 @@ export default function NextHybridSystems() {
               src={"/service/hybrid-systems.webp"}
               width={600}
               height={300}
+              priority
               className="object-contain"
-              alt="Next Hybrid Power System"
+              alt=" Hybrid Power System"
             />
           </div>
 

@@ -1,6 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Home Automation Solutions - Rayzen Power",
+  description:
+    "Upgrade your home with Rayzen Power's smart home automation solutions. Control lighting, appliances, climate, and security for enhanced comfort, safety, and energy efficiency.",
+  keywords:
+    "home automation, smart home solutions, smart lighting, smart appliances, security automation, energy efficiency, Rayzen Power",
+  openGraph: {
+    title: "Home Automation Solutions - Rayzen Power",
+    description:
+      "Upgrade your home with Rayzen Power's smart home automation solutions. Control lighting, appliances, climate, and security for enhanced comfort, safety, and energy efficiency.",
+    siteName: "Rayzen Power",
+    url: "https://rayzenpower.com/services/home-automation",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "https://rayzenpower.com/service/home-automation.webp",
+        width: 1200,
+        height: 630,
+        alt: "Home Automation System - Rayzen Power",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Automation Solutions - Rayzen Power",
+    description:
+      "Upgrade your home with Rayzen Power's smart home automation solutions. Control lighting, appliances, climate, and security for enhanced comfort, safety, and energy efficiency.",
+    creator: "@RayzenPower",
+    images: ["https://rayzenpower.com/service/home-automation.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
 export default function HomeAutomation() {
   return (
     <>
@@ -33,6 +78,7 @@ export default function HomeAutomation() {
               src={"/service/home-automation.webp"}
               width={600}
               height={300}
+              priority
               className="object-contain"
               alt="Smart Home Automation System"
             />

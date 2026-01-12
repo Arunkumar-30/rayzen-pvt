@@ -1,6 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "CCTV Security Cameras - Rayzen Power",
+  description:
+    "Protect your home or business with Rayzen Power's advanced CCTV security camera systems. Real-time monitoring, HD video recording, night vision, and reliable surveillance solutions.",
+  keywords:
+    "CCTV security cameras, surveillance systems, HD cameras, night vision, remote monitoring, Rayzen Power",
+  openGraph: {
+    title: "CCTV Security Cameras - Rayzen Power",
+    description:
+      "Protect your home or business with Rayzen Power's advanced CCTV security camera systems. Real-time monitoring, HD video recording, night vision, and reliable surveillance solutions.",
+    siteName: "Rayzen Power",
+    url: "https://rayzenpower.com/services/cctv-security",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "https://rayzenpower.com/service/cctv-camera.webp",
+        width: 1200,
+        height: 630,
+        alt: "CCTV Security Camera System - Rayzen Power",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CCTV Security Cameras - Rayzen Power",
+    description:
+      "Protect your home or business with Rayzen Power's advanced CCTV security camera systems. Real-time monitoring, HD video recording, night vision, and reliable surveillance solutions.",
+    creator: "@RayzenPower",
+    images: ["https://rayzenpower.com/service/cctv-camera.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
 export default function CCTVSecurityCameras() {
   return (
     <>
@@ -33,6 +78,7 @@ export default function CCTVSecurityCameras() {
               src={"/service/cctv-camera.webp"}
               width={600}
               height={300}
+              priority
               className="object-contain"
               alt="CCTV Security Camera System"
             />

@@ -1,5 +1,31 @@
 import ServicesBanner from "@/components/Services/ServicesBanner";
 import Aside from "@/components/ui-section/Aside";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services - Rayzen Power Private Limited",
+  description:
+    "Explore professional services by Rayzen Power Private Limited including Solar Power Installation, Hybrid Power Systems, Lithium Energy Storage, and Home Automation solutions.",
+  keywords: [
+    "Rayzen Services",
+    "Solar Power Installation",
+    "Hybrid Systems",
+    "Lithium Energy Storage",
+    "Home Automation",
+    "cctv security systems",
+    "solar panel installation",
+    "residential solar solutions",
+  ],
+  robots: "index, follow",
+  openGraph: {
+    title: "Our Services - Rayzen Power Private Limited",
+    description:
+      "Discover Rayzen Power Private Limited's expert services in solar, hybrid, lithium ESS, and home automation for residential and commercial setups.",
+    url: "https://www.rayzenpower.com/services", // update with actual services page URL
+    siteName: "Rayzen Power Private Limited",
+    type: "website",
+  },
+};
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {
   return (

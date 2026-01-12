@@ -22,11 +22,36 @@ export const metadata: Metadata = {
   },
   description:
     "Rayzen Power Private Limited is a leading manufacturer of high-quality power solutions in India.",
+  keywords: [
+    "Rayzen Power",
+    "Solar Power",
+    "Hybrid Systems",
+    "Home Automation",
+    "Energy Storage",
+    "Lithium ESS",
+    "Power Solutions India"
+  ],
   icons: {
     icon: "/fav.png",
   },
-  metadataBase: new URL("https://www.rayzenpower.com"), // change to your domain
+  metadataBase: new URL("https://www.rayzenpower.com"),
+  robots: "index, follow",
+  openGraph: {
+    title: "Rayzen Power Private Limited",
+    description: "Rayzen Power Private Limited is a leading manufacturer of high-quality power solutions in India.",
+    url: "https://www.rayzenpower.com",
+    siteName: "Rayzen Power Private Limited",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rayzen Power Private Limited",
+    description: "Leading manufacturer of high-quality power solutions in India.",
+    images: ["/fav.png"],
+  },
 };
+
+
 
 export default function RootLayout({
   children,
@@ -40,6 +65,7 @@ export default function RootLayout({
       >
         <NavbarComponent />
         {children}
+        
         <FooterComponent />
       </body>
     </html>

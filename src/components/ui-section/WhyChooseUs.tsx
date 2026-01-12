@@ -92,6 +92,7 @@ const WhyChooseUs = () => {
               alt={item.title}
               width={64}
               height={64}
+              priority
               className="w-16 h-16 mb-4"
             />
 

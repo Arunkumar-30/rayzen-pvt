@@ -30,6 +30,7 @@ const BannerSlider = () => {
               <div className="flex justify-start">
                 <Link
                   href="/contact-us"
+                  prefetch={true}
                   className="group rounded-full duration-500 text-white p-3 bg-black w-[230px] flex items-center border hover:border-white hover:bg-[#C70F0F] justify-center gap-4 text-sm ">
                   <svg
                     stroke="currentColor"
@@ -58,6 +59,7 @@ const BannerSlider = () => {
                 width={600}
                 height={600}
                 alt="lap-home"
+                priority
                 className="object-contain w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px]"
               />
             </div>

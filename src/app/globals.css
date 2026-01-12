@@ -12,7 +12,14 @@
     #C81010 100%
   );
 } */
- .banner-image {
+ /* .banner-image {
   background: linear-gradient(135deg, #E91414 0%, #C81010 100%);
+} */
+/* .banner-image{
+  background:linear-gradient(135deg,#ED1C24 0%,#ED1C24 100%);
+  background-color: transparent;
+} */
+.banner-image{
+  background: linear-gradient(135deg, #C71820 0%, #C71820 100%);
+  background-color: transparent;
 }
-

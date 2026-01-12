@@ -1,6 +1,53 @@
 import CommonBannerComponent from "@/components/ui-section/CommonBanner";
 import Image from "next/image";
+import { Metadata } from "next";
 
+
+// SEO Metadata
+export const metadata: Metadata = {
+  title: "About Rayzen Power - Solar Energy Solutions in India",
+  description:
+    "Learn about Rayzen Power, a leading solar energy company in India. Discover our mission, vision, and innovative solar solutions for homes and businesses.",
+  keywords:
+    "Rayzen Power, solar energy, solar panels, lithium batteries, solar inverters, sustainable energy, renewable energy India",
+  openGraph: {
+    title: "About Rayzen Power - Solar Energy Solutions in India",
+    description:
+      "Learn about Rayzen Power, a leading solar energy company in India. Discover our mission, vision, and innovative solar solutions for homes and businesses.",
+    siteName: "Rayzen Power",
+    url: "https://rayzenpower.com/about",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "https://rayzenpower.com/home/img3.webp",
+        width: 1200,
+        height: 630,
+        alt: "Rayzen Power solar solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Rayzen Power - Solar Energy Solutions in India",
+    description:
+      "Learn about Rayzen Power, a leading solar energy company in India. Discover our mission, vision, and innovative solar solutions for homes and businesses.",
+    creator: "@RayzenPower",
+    images: ["https://rayzenpower.com/home/img3.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
 const About = () => {
   return (
     <>

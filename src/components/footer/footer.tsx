@@ -72,22 +72,22 @@ const FooterComponent = () => {
 
           <ul className="flex gap-4 pt-4">
             <li>
-              <Link href="https://x.com/rayzenpower" target="_blank">
+              <Link className="hover:text-[#E91414]" href="https://x.com/rayzenpower" target="_blank">
                 <FaXTwitter />
               </Link>
             </li>
             <li>
-              <Link href="https://www.instagram.com/rayzenpower" target="_blank">
+              <Link className="hover:text-[#E91414]" href="https://www.instagram.com/rayzenpower" target="_blank">
                 <FaInstagram />
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link className="hover:text-[#E91414]" href="#">
                 <FaFacebookF />
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link className="hover:text-[#E91414]" href="#">
                 <FaLinkedinIn />
               </Link>
             </li>
@@ -123,7 +123,7 @@ const FooterComponent = () => {
 
           <ul className="mt-4 space-y-4 text-[16px]">
             <li className="flex gap-2">
-              <Image src="/footer/location.png" className="object-contain" alt="Location" width={24} height={24} />
+              <Image src="/footer/location.png" className="object-contain" priority alt="Location" width={24} height={24} />
               <span>
                 1/264, 567, Pollachi Main Rd, Eachanari, Coimbatore,
                 Tamil Nadu - 641021
@@ -131,12 +131,12 @@ const FooterComponent = () => {
             </li>
 
             <li className="flex gap-2">
-              <Image src="/footer/phone.png" alt="Phone" width={24} height={24} />
+              <Image src="/footer/phone.png" priority alt="Phone" width={24} height={24} />
               <Link href="tel:+919840821382">+91 9840821382</Link>
             </li>
 
             <li className="flex gap-2">
-              <Image src="/footer/email.png" alt="Email" width={24} height={24} />
+              <Image src="/footer/email.png" priority alt="Email" width={24} height={24} />
               <Link href="mailto:info@rayzenpower.com">info@rayzenpower.com</Link>
             </li>
           </ul>

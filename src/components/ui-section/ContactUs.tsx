@@ -148,6 +148,7 @@ export default function ContactSection() {
     alt="Rayzen Power Logo"
     width={96}
     height={96}
+    priority
     className="rounded-full object-cover"
   />
               <div>

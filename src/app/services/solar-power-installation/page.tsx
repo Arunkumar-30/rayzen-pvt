@@ -1,6 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Solar Power Installation - Rayzen Power",
+  description:
+    "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
+  keywords:
+    "solar power installation, solar panels, renewable energy, Rayzen Power, solar energy, commercial solar, residential solar",
+  openGraph: {
+    title: "Solar Power Installation - Rayzen Power",
+    description:
+      "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
+    siteName: "Rayzen Power",
+    url: "https://rayzenpower.com/services/solar-power",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "https://rayzenpower.com/service/solar-power.webp",
+        width: 1200,
+        height: 630,
+        alt: "Solar Power Installation - Rayzen Power",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solar Power Installation - Rayzen Power",
+    description:
+      "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
+    creator: "@RayzenPower",
+    images: ["https://rayzenpower.com/service/solar-power.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
 export default function SolarPower() {
   return (
     <>
@@ -31,6 +76,7 @@ export default function SolarPower() {
               src={"/service/solar-power.webp"} // replace with your solar image
               width={600}
               height={300}
+              priority
               className="object-contain"
               alt="Solar Panel Installation"
             />
