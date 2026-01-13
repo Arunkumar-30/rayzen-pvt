@@ -35,14 +35,14 @@ export default function TestimonialSlider() {
       {/* Heading + Arrows */}
       <div className="flex items-center justify-between mb-10">
         <div>
-          <p className="text-sm font-bold uppercase text-[#E91414]">Testimonials</p>
+          <p className="text-sm font-bold uppercase text-[#d11a19]">Testimonials</p>
           <h2 className="text-3xl font-semibold text-black">What Our Clients Say</h2>
         </div>
 
        <div className="flex gap-3">
   <button
     ref={prevRef}
-    className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#E91414] hover:text-white"
+    className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#d11a19] hover:text-white"
   >
     <span className="sr-only">Previous slide</span>
     ❮
@@ -50,7 +50,7 @@ export default function TestimonialSlider() {
 
   <button
     ref={nextRef}
-    className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#E91414] hover:text-white"
+    className="w-10 h-10 rounded-lg border flex items-center justify-center hover:bg-[#d11a19] hover:text-white"
   >
     <span className="sr-only">Next slide</span>
     ❯
@@ -77,7 +77,7 @@ export default function TestimonialSlider() {
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index} className="flex justify-center">
-            <div className="bg-white border border-[#E91414] rounded-xl p-6 max-w-[580px] flex gap-4">
+            <div className="bg-white border border-[#d11a19] rounded-xl p-6 max-w-[580px] flex gap-4">
               <Image
                 src="/home/man.webp"
                 alt="Client"
@@ -89,7 +89,7 @@ export default function TestimonialSlider() {
               <div>
                 <div className="flex items-center gap-4">
                   <h3 className="font-semibold text-lg">{item.name}</h3>
-                  <span className="text-[#e91414] text-sm">{item.role}</span>
+                  <span className="text-[#d11a19] text-sm">{item.role}</span>
                 </div>
 
                 <div className="flex gap-1 my-2">

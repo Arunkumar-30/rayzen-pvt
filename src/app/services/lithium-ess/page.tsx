@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "https://rayzenpower.com/service/lithium-ess.webp",
+        url: "https://rayzenpower.com/services/lithium-ess.webp",
         width: 1200,
         height: 630,
         alt: "Lithium Energy Storage System - Rayzen Power",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Rayzen Power offers advanced Lithium Energy Storage Systems (ESS) for residential, commercial, and industrial applications. High performance, long life, and reliable backup power.",
     creator: "@RayzenPower",
-    images: ["https://rayzenpower.com/service/lithium-ess.webp"],
+    images: ["https://rayzenpower.com/services/lithium-ess.webp"],
   },
   robots: {
     index: true,
@@ -48,172 +48,205 @@ export const metadata: Metadata = {
 };
 export default function LithiumEnergyStorage() {
   return (
-    <>
-      <div className="max-w-7xl mx-auto px-6 lg:px-30 mb-10 space-y-6">
-        {/* Title + Button Row */}
-        <div
-          className="flex flex-col lg:flex-row items-center justify-between"
+    <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
+      {/* Title + CTA */}
+      <section
+        className="flex flex-col lg:flex-row items-center justify-between gap-4"
+        data-aos="fade-up"
+      >
+        <h1 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800">
+          Lithium Energy Storage Systems (ESS)
+        </h1>
+
+        <Link
+          href="/contact-us"
+          className="px-6 py-2 bg-[#d11a19] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition"
+        >
+          Enquire Now
+        </Link>
+      </section>
+
+      {/* Intro */}
+      <p
+        className="text-lg font-medium text-gray-700 max-w-4xl"
+        data-aos="fade-up"
+      >
+        Store energy efficiently with next-generation lithium energy storage
+        systems designed for high performance, long life, and reliable backup
+        power for residential, commercial, and industrial applications.
+      </p>
+
+      {/* Image + Content */}
+      <section className="flex flex-col lg:flex-col items-center gap-10">
+        {/* Image */}
+        <div className="flex-1" data-aos="zoom-in">
+          <Image
+            src="/service/lithium-ess.webp"
+            width={600}
+            height={400}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto object-contain"
+            alt="Lithium energy storage system for solar and backup power"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 space-y-6 p-4" data-aos="fade-up">
+          <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+            Why Choose Lithium Energy Storage Systems
+          </h2>
+
+          <p className="text-lg text-gray-600">
+            Lithium ESS offers superior energy density, fast charging, and longer
+            lifecycle compared to traditional batteries. These systems ensure
+            stable power supply, peak load management, and seamless integration
+            with solar and hybrid setups.
+          </p>
+
+          <ul className="space-y-4">
+            {[
+              "High energy density with compact design",
+              "Fast charging and deep discharge capability",
+              "Long lifespan with advanced battery management",
+            ].map((text, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-4 bg-[#FDE8E9] p-4 rounded"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#d11a19] text-white shrink-0">
+                  ✓
+                </span>
+                <span className="text-gray-800 font-medium">{text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section>
+        <h2
+          className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 mb-6"
           data-aos="fade-up"
         >
-          <h2 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-          Lithium Energy Storage Systems (ESS)
-          </h2>
+          Why Choose Us for Lithium ESS?
+        </h2>
 
-        <Link href="/contact-us" className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
-            Enquire Now
-          </Link>
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6">
+          {[
+            "Advanced Lithium-Ion Technology",
+            "High Safety with Smart BMS Protection",
+            "Scalable Storage Capacity Solutions",
+            "Seamless Solar & Hybrid Integration",
+            "24/7 Performance Monitoring",
+            "Long-Term Cost Efficiency",
+          ].map((text, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+              className="bg-[#FDE8E8] border border-[#d11a19] p-6 rounded-lg text-center hover:shadow-md transition"
+            >
+              <p className="text-lg font-semibold text-[#8A0E0E]">{text}</p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <h3 className="text-lg font-medium text-gray-700 ml-3" data-aos="fade-up">
-          Store energy efficiently with next-generation lithium energy storage
-          systems designed for high performance, long life, and reliable backup
-          power for residential, commercial, and industrial applications.
-        </h3>
+      {/* Deployment Process */}
+      <section>
+        <h2
+          className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 mb-8"
+          data-aos="fade-up"
+        >
+          Core Steps of Our Lithium ESS Deployment
+        </h2>
 
-        {/* Image + Details */}
-        <div className="flex flex-col justify-center items-center gap-10">
-          {/* Image */}
-          <div className="flex-1 space-y-5" data-aos="zoom-in">
-            <Image
-              src={"/service/lithium-ess.webp"}
-              width={600}
-              height={300}
-              className="object-contain"
-              alt="Lithium Energy Storage System"
-            />
-          </div>
-
-          {/* Content */}
-          <div className="flex-1 space-y-5 p-6" data-aos="fade-up">
-            <h3 className="josefin-sans text-1xl lg:text-2xl font-semibold text-gray-800 leading-tight">
-              Why Choose Lithium Energy Storage Systems
-            </h3>
-            <p className="text-lg text-gray-600">
-              Lithium ESS offers superior energy density, fast charging, and
-              longer lifecycle compared to traditional batteries. These systems
-              ensure stable power supply, peak load management, and seamless
-              integration with solar and hybrid setups.
-            </p>
-            <ul className="space-y-4" data-aos="fade-up">
-              {[
-                "High energy density with compact design",
-                "Fast charging and deep discharge capability",
-                "Long lifespan with advanced battery management",
-              ].map((text, i) => (
-                <li
-                  key={i}
-                  className="flex items-start bg-[#FDE8E9] p-5"
-                >
-                  <span className="mr-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#E91414] text-white">
-                    <svg
-                      aria-hidden="true"
-                      className="w-4 h-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                      fill="currentColor"
-                    >
-                      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-                    </svg>
-                  </span>
-
-                  <span className="text-gray-800 font-medium">
-                    {text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Why Choose Us */}
-        <div>
-          <h2
-            className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
-            data-aos="fade-up"
-          >
-            Why Choose Us for Lithium ESS?
-          </h2>
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
-            {[
-              "Advanced Lithium-Ion Technology",
-              "High Safety with Smart BMS Protection",
-              "Scalable Storage Capacity Solutions",
-              "Seamless Solar & Hybrid Integration",
-              "24/7 Performance Monitoring",
-              "Long-Term Cost Efficiency",
-            ].map((text, index) => (
-              <div
-                key={index}
-                data-aos="zoom-in"
-                className="bg-[#FDE8E8] border border-[#E91414] p-6 shadow-sm flex items-center justify-center text-center hover:shadow-md transition"
-              >
-                <p className="text-lg font-semibold text-[#8A0E0E]">
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Core Process */}
-        <div className="w-full mt-10 mb-10">
-          <h2
-            className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
-            data-aos="fade-up"
-          >
-            Core Steps of Our Lithium ESS Deployment
-          </h2>
-          <div className="justify-center gap-20 items-start lg:flex-row flex-col space-y-6 py-5">
-            {/* Assessment */}
-            <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Energy Requirement Analysis
-              </h2>
-              <p className="text-lg text-gray-600">
-                Evaluate energy usage patterns to design the most efficient
-                lithium storage solution.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Load profiling and demand analysis</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Battery capacity sizing</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Backup duration planning</span></li>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Energy Requirement Analysis",
+              desc: "Evaluate energy usage patterns to design the most efficient lithium storage solution.",
+              points: [
+                "Load profiling and demand analysis",
+                "Battery capacity sizing",
+                "Backup duration planning",
+              ],
+            },
+            {
+              title: "System Installation",
+              desc: "Professional installation of lithium battery banks, inverters, and energy management systems.",
+              points: [
+                "Battery rack and inverter setup",
+                "BMS configuration and safety checks",
+                "System integration and testing",
+              ],
+            },
+            {
+              title: "Monitoring & Maintenance",
+              desc: "Continuous monitoring and preventive maintenance to ensure maximum efficiency.",
+              points: [
+                "Real-time battery health monitoring",
+                "Thermal and safety management",
+                "Performance optimization & upgrades",
+              ],
+            },
+          ].map((step, i) => (
+            <div
+              key={i}
+              className="bg-gray-100 p-6 rounded"
+              data-aos="fade-up"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {step.title}
+              </h3>
+              <p className="text-gray-600 mb-4">{step.desc}</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                {step.points.map((p, idx) => (
+                  <li key={idx}>{p}</li>
+                ))}
               </ul>
             </div>
-
-            {/* Installation */}
-            <div className="space-y-6 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                System Installation
-              </h2>
-              <p className="text-lg text-gray-600">
-                Professional installation of lithium battery banks, inverters,
-                and energy management systems.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Battery rack and inverter setup</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">BMS configuration and safety checks</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">System integration and testing</span></li>
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Monitoring & Maintenance
-              </h2>
-              <p className="text-lg text-gray-600">
-                Continuous monitoring and preventive maintenance to ensure
-                maximum efficiency and system longevity.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Real-time battery health monitoring</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Thermal and safety management</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Performance optimization & upgrades</span></li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-    </>
+      </section>
+    <section className="flex flex-col lg:flex-row items-center gap-10 py-10 px-4 lg:px-20">
+  {/* Image */}
+  <div className="flex-1" data-aos="zoom-in">
+    <Image
+      src="/service/lithium-battery-2.webp"
+      width={600}
+      height={600}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className="w-full h-auto object-contain"
+      alt="LFP Battery Pack for residential and commercial solar installations"
+      priority
+    />
+  </div>
+
+  {/* Content */}
+  <div className="flex-1 space-y-6" data-aos="fade-up">
+    <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+      LFP Battery Pack
+    </h2>
+   
+    <ul className="space-y-4 list-disc pl-6">
+      {[
+        "Expandable capacity up to 16 units",
+        "Inbuilt BMS for enhanced safety and hazard protection",
+        "Energy capacity up to 81.92 kWh",
+        "Supports both wall-mounted and floor-mounted installation",
+        "Cycle life of up to 6000 charge/discharge cycles",
+        "Up to 90% Depth of Discharge(DOD)",
+        "Up to 1C charge/discharge capability with derating"
+      ].map((text, i) => (
+        <li key={i} className="text-gray-800 font-medium">
+          {text}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+    </main>
   );
 }

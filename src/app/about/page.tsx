@@ -152,31 +152,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Product Section */}
-      <section className="bg-[#f9fafb] py-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <h2
-            className="text-black text-[40px] max-md:text-[28px] font-semibold mb-10"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            N-Type TOPCon Bifacial Solar Panel
-          </h2>
-
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[#585858] text-base xl:text-lg font-medium list-disc pl-5">
-            <li>Higher efficiency and superior power output</li>
-            <li>Bifacial generation from front and rear sides</li>
-            <li>Lower annual degradation rate</li>
-            <li>Excellent low-light and high-temperature performance</li>
-            <li>Advanced N-Type TOPCon cell technology</li>
-            <li>Improved resistance to micro-cracks and PID</li>
-            <li>Longer lifespan with extended warranty</li>
-            <li>Suitable for rooftop, ground-mounted & tracking systems</li>
-            <li>Ideal for commercial & utility-scale projects</li>
-            <li>Reliable in high-humidity & coastal regions</li>
-          </ul>
-        </div>
-      </section>
+  
     </>
   );
 };

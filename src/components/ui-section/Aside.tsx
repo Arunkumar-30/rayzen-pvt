@@ -15,7 +15,7 @@ export default function Aside() {
   const pathname = usePathname();
 
   return (
-    <aside className="p-4 sticky top-28 border border-[#E91414] rounded-lg bg-white">
+    <aside className="p-4 sticky top-28 border border-[#d11a19] rounded-lg bg-white">
       <ul className="space-y-2">
         {pages.map((item) => {
           const active = pathname === item.href;
@@ -27,7 +27,7 @@ export default function Aside() {
                 className={`block px-3 py-2 rounded-md transition
                   ${
                     active
-                      ? "bg-[#E91414] text-white"
+                      ? "bg-[#d11a19] text-white"
                       : "hover:bg-gray-100 text-gray-700"
                   }`}
               >

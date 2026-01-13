@@ -14,7 +14,7 @@ const FooterComponent = () => {
     <>
       {/* CTA Banner */}
       <div className="banner-image">
-        <div className="relative bg-black/30 bg-cover bg-center bg-no-repeat py-16 px-4 sm:px-6">
+        <div className="relative bg-black/10 bg-cover bg-center bg-no-repeat py-16 px-4 sm:px-6">
           <div className="flex items-center justify-center text-center">
             <div className="w-full max-w-4xl space-y-6">
               <p className="text-sm sm:text-lg md:text-xl text-white">
@@ -72,22 +72,22 @@ const FooterComponent = () => {
 
             <ul className="flex gap-4 pt-4">
             <li>
-              <Link className="hover:text-[#E91414]" href="https://x.com/rayzenpower" target="_blank">
+              <Link className="hover:text-[#d11a19]" href="https://x.com/rayzenpower" target="_blank" rel="noopener noreferrer">
                 <FaXTwitter />
               </Link>
             </li>
             <li>
-              <Link className="hover:text-[#E91414]" href="https://www.instagram.com/rayzenpower" target="_blank">
+              <Link className="hover:text-[#d11a19]" href="https://www.instagram.com/rayzenpower" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </Link>
             </li>
             <li>
-              <Link className="hover:text-[#E91414]" href="#">
+              <Link className="hover:text-[#d11a19]" href="https://www.facebook.com/share/1PUByyC79G/" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </Link>
             </li>
             <li>
-              <Link className="hover:text-[#E91414]" href="#">
+              <Link className="hover:text-[#d11a19]" href="#" rel="noopener noreferrer">
                 <FaLinkedinIn />
               </Link>
             </li>
@@ -100,7 +100,7 @@ const FooterComponent = () => {
           <ul className="mt-4 space-y-4 text-[16px]">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="/career">Career</Link></li>
+            <li><Link href="/careers">Careers</Link></li>
             <li><Link href="/contact-us">Contact Us</Link></li>
           </ul>
         </div>
@@ -123,7 +123,8 @@ const FooterComponent = () => {
 
           <ul className="mt-4 space-y-4 text-[16px]">
             <li className="flex gap-2">
-              <Image src="/footer/location.png" className="object-contain" priority alt="Location" width={24} height={24} />
+              <Image src="/footer/location.webp" className="w-6 h-6 object-contain" priority alt="Location" 
+              width={24} height={24} />
               <span>
                 1/264, 567, Pollachi Main Rd, Eachanari, Coimbatore,
                 Tamil Nadu - 641021
@@ -131,12 +132,12 @@ const FooterComponent = () => {
             </li>
 
             <li className="flex gap-2">
-              <Image src="/footer/phone.png" priority alt="Phone" width={24} height={24} />
+              <Image src="/footer/phone.webp" priority alt="Phone" width={24} height={24} />
               <Link href="tel:+919840821382">+91 9840821382</Link>
             </li>
 
             <li className="flex gap-2">
-              <Image src="/footer/email.png" priority alt="Email" width={24} height={24} />
+              <Image src="/footer/email.webp" priority alt="Email" width={24} height={24} />
               <Link href="mailto:info@rayzenpower.com">info@rayzenpower.com</Link>
             </li>
           </ul>

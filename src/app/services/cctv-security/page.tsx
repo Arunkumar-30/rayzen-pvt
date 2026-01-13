@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "https://rayzenpower.com/service/cctv-camera.webp",
+        url: "https://rayzenpower.com/services/cctv-camera.webp",
         width: 1200,
         height: 630,
         alt: "CCTV Security Camera System - Rayzen Power",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Protect your home or business with Rayzen Power's advanced CCTV security camera systems. Real-time monitoring, HD video recording, night vision, and reliable surveillance solutions.",
     creator: "@RayzenPower",
-    images: ["https://rayzenpower.com/service/cctv-camera.webp"],
+    images: ["https://rayzenpower.com/services/cctv-camera.webp"],
   },
   robots: {
     index: true,
@@ -48,173 +48,169 @@ export const metadata: Metadata = {
 };
 export default function CCTVSecurityCameras() {
   return (
-    <>
-      <div className="max-w-7xl mx-auto px-6 lg:px-30 mb-10 space-y-6">
-        {/* Title + Button Row */}
-        <div
-          className="flex flex-col lg:flex-row items-center justify-between"
+    
+    <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-16 space-y-8">
+      {/* Header */}
+      <header
+        className="flex flex-col lg:flex-row items-center justify-between gap-4"
+        data-aos="fade-up"
+      >
+        <h1 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800">
+          CCTV Security Camera Systems
+        </h1>
+
+        <Link
+          href="/contact-us"
+          className="px-6 py-2 bg-[#d11a19] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition"
+        >
+          Enquire Now
+        </Link>
+      </header>
+
+      {/* Intro */}
+      <p
+        className="text-lg font-medium text-gray-700 max-w-4xl"
+        data-aos="fade-up"
+      >
+        Protect your property with advanced CCTV security camera systems designed
+        for real-time monitoring, crime prevention, and complete peace of mind
+        for homes, businesses, and industrial premises.
+      </p>
+
+ 
+       {/* Image + Content */}
+            <section className="flex flex-col lg:flex-col items-center gap-10">
+              {/* Image */}
+              <div className="flex-1" data-aos="zoom-in">
+                <Image
+                   src="/service/cctv-camera.webp"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto object-contain"
+               alt="CCTV Security Camera System installation"
+                />
+              </div>
+      
+              {/* Content */}
+              <div className="flex-1 space-y-6" data-aos="fade-up">
+                <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+                  Why Choose CCTV Security Cameras
+                </h2>
+      
+                <p className="text-lg text-gray-600">
+                CCTV surveillance systems provide continuous monitoring, evidence
+            recording, and remote access to enhance security. Our solutions
+            ensure clear video quality, reliable performance, and intelligent
+            monitoring features.
+                </p>
+      
+                <ul className="space-y-4">
+                  {[
+                    "24/7 surveillance and real-time monitoring",
+              "High-definition video recording with night vision",
+              "Remote viewing through mobile and desktop devices",
+                  ].map((text, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-4 bg-[#FDE8E9] p-4 rounded"
+                    >
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#d11a19] text-white shrink-0">
+                        ✓
+                      </span>
+                      <span className="text-gray-800 font-medium">{text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
+      {/* Why Choose Us */}
+      <section>
+        <h2
+          className="mt-12 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800"
           data-aos="fade-up"
         >
-          <h2 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-            CCTV Security Camera Systems
-          </h2>
+          Why Choose Us for CCTV Security Systems?
+        </h2>
 
-          <Link href="/contact-us" className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
-            Enquire Now
-          </Link>
+        <div className="grid lg:grid-cols-2 gap-6 mt-6">
+          {[
+            "High-Resolution IP & Analog Cameras",
+            "Expert Camera Placement & Installation",
+            "Night Vision & Motion Detection",
+            "Remote Monitoring via Mobile App",
+            "Secure Data Storage & Playback",
+            "Reliable After-Sales Support",
+          ].map((text, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+              className="bg-[#FDE8E8] border border-[#d11a19] p-6 rounded-lg text-center hover:shadow-md transition"
+            >
+              <p className="text-lg font-semibold text-[#8A0E0E]">{text}</p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <h3 className="text-lg font-medium text-gray-700 ml-3" data-aos="fade-up">
-          Protect your property with advanced CCTV security camera systems designed
-          for real-time monitoring, crime prevention, and complete peace of mind
-          for homes, businesses, and industrial premises.
-        </h3>
+      {/* Process */}
+      <section>
+        <h2
+          className="mt-12 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800"
+          data-aos="fade-up"
+        >
+          Core Steps of Our CCTV Installation Process
+        </h2>
 
-        {/* Image + Details */}
-        <div className="flex flex-col justify-center items-center gap-10">
-          {/* Image */}
-          <div className="flex-1 space-y-5" data-aos="zoom-in">
-            <Image
-              src={"/service/cctv-camera.webp"}
-              width={600}
-              height={300}
-              priority
-              className="object-contain"
-              alt="CCTV Security Camera System"
-            />
+        <div className="grid lg:grid-cols-3 gap-6 mt-6">
+          {/* Step 1 */}
+          <div className="bg-gray-100 p-6 space-y-4" data-aos="fade-up">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Site Survey & Planning
+            </h3>
+            <p className="text-gray-600">
+              Evaluate the premises to determine optimal camera placement and
+              security coverage.
+            </p>
+            <ul className="list-disc pl-5 text-gray-700">
+              <li>Entry & exit analysis</li>
+              <li>Blind spot identification</li>
+              <li>Camera type selection</li>
+            </ul>
           </div>
 
-          {/* Content */}
-          <div className="flex-1 space-y-5 p-6" data-aos="fade-up">
-            <h3 className="josefin-sans text-1xl lg:text-2xl font-semibold text-gray-800 leading-tight">
-              Why Choose CCTV Security Cameras
+          {/* Step 2 */}
+          <div className=" bg-gray-100 p-6 space-y-4" data-aos="fade-up">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Camera Installation
             </h3>
-            <p className="text-lg text-gray-600">
-              CCTV surveillance systems provide continuous monitoring, evidence
-              recording, and remote access to enhance security. Our solutions
-              ensure clear video quality, reliable performance, and intelligent
-              monitoring features.
+            <p className="text-gray-600">
+              Professional installation of cameras, DVR/NVR systems, and cabling.
             </p>
-            <ul className="space-y-4" data-aos="fade-up">
-              {[
-                "24/7 surveillance and real-time monitoring",
-                "High-definition video recording with night vision",
-                "Remote viewing through mobile and desktop devices",
-              ].map((text, i) => (
-                <li
-                  key={i}
-                  className="flex items-start bg-[#FDE8E9] p-5"
-                >
-                  <span className="mr-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#E91414] text-white">
-                    <svg
-                      aria-hidden="true"
-                      className="w-4 h-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                      fill="currentColor"
-                    >
-                      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-                    </svg>
-                  </span>
+            <ul className="list-disc pl-5 text-gray-700">
+              <li>Indoor & outdoor mounting</li>
+              <li>DVR/NVR configuration</li>
+              <li>Live feed setup</li>
+            </ul>
+          </div>
 
-                  <span className="text-gray-800 font-medium">
-                    {text}
-                  </span>
-                </li>
-              ))}
+          {/* Step 3 */}
+          <div className="bg-gray-100 p-6 space-y-4" data-aos="fade-up">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Monitoring & Maintenance
+            </h3>
+            <p className="text-gray-600">
+              Ongoing support for optimal performance and security.
+            </p>
+            <ul className="list-disc pl-5 text-gray-700">
+              <li>System health checks</li>
+              <li>Storage & playback support</li>
+              <li>Upgrades & troubleshooting</li>
             </ul>
           </div>
         </div>
-
-        {/* Why Choose Us */}
-        <div>
-          <h2
-            className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
-            data-aos="fade-up"
-          >
-            Why Choose Us for CCTV Security Systems?
-          </h2>
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
-            {[
-              "High-Resolution IP & Analog Cameras",
-              "Expert Camera Placement & Installation",
-              "Night Vision & Motion Detection",
-              "Remote Monitoring via Mobile App",
-              "Secure Data Storage & Playback",
-              "Reliable After-Sales Support",
-            ].map((text, index) => (
-              <div
-                key={index}
-                data-aos="zoom-in"
-                className="bg-[#FDE8E8] border border-[#E91414] p-6 shadow-sm flex items-center justify-center text-center hover:shadow-md transition"
-              >
-                <p className="text-lg font-semibold text-[#8A0E0E]">
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Core Process */}
-        <div className="w-full mt-10 mb-10">
-          <h2
-            className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
-            data-aos="fade-up"
-          >
-            Core Steps of Our CCTV Installation Process
-          </h2>
-          <div className="justify-center gap-20 items-start lg:flex-row flex-col space-y-6 py-5">
-            {/* Assessment */}
-            <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Site Survey & Planning
-              </h2>
-              <p className="text-lg text-gray-600">
-                Evaluate the premises to determine optimal camera placement and
-                security coverage.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Entry and exit point analysis</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Blind spot identification</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Camera type selection</span></li>
-              </ul>
-            </div>
-
-            {/* Installation */}
-            <div className="space-y-6 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Camera Installation
-              </h2>
-              <p className="text-lg text-gray-600">
-                Professional installation of cameras, DVR/NVR systems, and secure
-                cabling.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Indoor & outdoor camera mounting</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">DVR/NVR configuration</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Live feed and recording setup</span></li>
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Monitoring & Maintenance
-              </h2>
-              <p className="text-lg text-gray-600">
-                Continuous system support to ensure reliable security and optimal
-                camera performance.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">System health checks</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Storage and playback support</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Upgrades & troubleshooting</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+      </section>
+    </section>
   );
 }

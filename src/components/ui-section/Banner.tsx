@@ -12,7 +12,7 @@ const BannerSlider = () => {
       {/* Line element positioned relative to viewport */}
 
       <div className="relative banner-image">
-        <div className="relative bg-black/30 w-full overflow-hidden">
+        <div className="relative bg-black/10 w-full overflow-hidden">
           <div className="flex flex-col-reverse sm:flex-row items-center justify-between transition-transform 
           duration-700 ease-in-out h-auto sm:h-[500px] w-full px-6 sm:px-12 py-10 gap-10">
             {/* Left Content */}

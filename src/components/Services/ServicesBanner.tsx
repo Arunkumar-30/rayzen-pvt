@@ -35,7 +35,7 @@ const ServicesBanner = () => {
   return (
     <div className="relative w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] banner-image overflow-hidden">
       <div
-        className={`absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity duration-700 ${
+        className={`absolute inset-0 bg-black/10 flex items-center justify-center transition-opacity duration-700 ${
           fadeIn ? "opacity-100" : "opacity-0"
         }`}
       >

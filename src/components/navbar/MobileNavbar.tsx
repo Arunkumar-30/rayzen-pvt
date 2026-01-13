@@ -59,7 +59,7 @@ const MobileMenu = ({
                   >
                     <span
                       className={`${
-                        isActive ? "text-[#E91414]" : "text-gray-800"
+                        isActive ? "text-[#d11a19]" : "text-gray-800"
                       }`}
                     >
                       {navItem.label}
@@ -93,7 +93,7 @@ const MobileMenu = ({
                         key={idx}
                         href={item.href}
                         onClick={handleLinkClick}
-                        className="block py-2 font-semibold text-gray-700 hover:text-[#E91414]"
+                        className="block py-2 font-semibold text-gray-700 hover:text-[#d11a19]"
                       >
                         {item.label}
                       </Link>
@@ -105,7 +105,7 @@ const MobileMenu = ({
                   href={navItem.href}
                   onClick={handleLinkClick}
                   className={`block font-semibold uppercase ${
-                    isActive ? "text-[#E91414]" : "text-gray-800"
+                    isActive ? "text-[#d11a19]" : "text-gray-800"
                   }`}
                 >
                   {navItem.label}
@@ -119,7 +119,7 @@ const MobileMenu = ({
         <Link
           href="/contact-us"
           onClick={handleLinkClick}
-          className="block text-center bg-[#E91414] text-white py-2 rounded-full uppercase font-semibold hover:bg-black transition"
+          className="block text-center bg-[#d11a19] text-white py-2 rounded-full uppercase font-semibold hover:bg-black transition"
         >
           Contact Us
         </Link>

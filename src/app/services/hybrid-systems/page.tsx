@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "https://rayzenpower.com/service/hybrid-systems.webp",
+        url: "https://rayzenpower.com/services/hybrid-systems.webp",
         width: 1200,
         height: 630,
         alt: "Hybrid Power System - Rayzen Power",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Discover Rayzen Power's Hybrid Power Systems that combine solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
     creator: "@RayzenPower",
-    images: ["https://rayzenpower.com/service/hybrid-systems.webp"],
+    images: ["https://rayzenpower.com/services/hybrid-systems.webp"],
   },
   robots: {
     index: true,
@@ -48,173 +48,243 @@ export const metadata: Metadata = {
 };
 export default function HybridSystems() {
   return (
-    <>
-      <div className="max-w-7xl mx-auto px-6 lg:px-30 mb-10 space-y-6">
-        {/* Title + Button Row */}
-        <div
-          className="flex flex-col lg:flex-row items-center justify-between"
+   <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
+      {/* Title + CTA */}
+      <section
+        className="flex flex-col lg:flex-row items-center justify-between gap-4"
+        data-aos="fade-up"
+      >
+        <h1 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800">
+          Hybrid Power Systems
+        </h1>
+
+        <Link
+          href="/contact-us"
+          className="px-6 py-2 bg-[#d11a19] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition"
+        >
+          Enquire Now
+        </Link>
+      </section>
+
+      {/* Intro */}
+      <p
+        className="text-lg font-medium text-gray-700 max-w-4xl"
+        data-aos="fade-up"
+      >
+        Experience uninterrupted power with hybrid systems that intelligently
+        combine solar energy, battery storage, and grid power to deliver reliable,
+        efficient, and cost-effective electricity.
+      </p>
+
+      {/* Image + Content */}
+      <section className="flex flex-col lg:flex-col items-center gap-10">
+        {/* Image */}
+        <div className="flex-1" data-aos="zoom-in">
+          <Image
+            src="/service/hybrid-systems.webp"
+            width={600}
+            height={400}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto object-contain"
+            alt="Hybrid power system combining solar, battery, and grid power"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 space-y-6 p-4" data-aos="fade-up">
+          <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+            Why Choose Hybrid Power Systems
+          </h2>
+
+          <p className="text-lg text-gray-600">
+            Hybrid power systems ensure continuous energy availability by
+            seamlessly switching between solar, battery backup, and grid power.
+            They reduce dependency on the grid while maximizing energy savings
+            and reliability.
+          </p>
+
+          <ul className="space-y-4">
+            {[
+              "Uninterrupted power using solar, battery, and grid",
+              "Reduced electricity bills with smart energy usage",
+              "Reliable backup during power cuts and outages",
+            ].map((text, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-4 bg-[#FDE8E9] p-4 rounded"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#d11a19] text-white shrink-0">
+                  ✓
+                </span>
+                <span className="text-gray-800 font-medium">{text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section>
+        <h2
+          className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 mb-6"
           data-aos="fade-up"
         >
-          <h2 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-           Hybrid Power Systems
-          </h2>
+          Why Choose Us for Hybrid Power Systems?
+        </h2>
 
-         <Link href="/contact-us" className="mt-4 lg:mt-0 px-6 py-2 bg-[#E91414] text-white font-semibold rounded-lg hover:bg-[#9B0F0F] transition">
-            Enquire Now
-          </Link>
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6">
+          {[
+            "Advanced Hybrid Inverter Technology",
+            "High-Capacity Battery Storage Solutions",
+            "Expert System Design & Installation",
+            "24/7 Power Reliability",
+            "Energy Optimization & Smart Monitoring",
+            "Cost-Effective Long-Term Savings",
+          ].map((text, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+              className="bg-[#FDE8E8] border border-[#d11a19] p-6 rounded-lg text-center hover:shadow-md transition"
+            >
+              <p className="text-lg font-semibold text-[#8A0E0E]">{text}</p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <h3 className="text-lg font-medium text-gray-700 ml-3" data-aos="fade-up">
-          Experience uninterrupted power with  hybrid systems that
-          intelligently combine solar energy, battery storage, and grid power to
-          deliver reliable, efficient, and cost-effective electricity.
-        </h3>
+      {/* Installation Process */}
+      <section>
+        <h2
+          className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 mb-8"
+          data-aos="fade-up"
+        >
+          Core Steps of Our Hybrid System Installation
+        </h2>
 
-        {/* Image + Details */}
-        <div className="flex flex-col justify-center items-center gap-10">
-          {/* Image */}
-          <div className="flex-1 space-y-5" data-aos="zoom-in">
-            <Image
-              src={"/service/hybrid-systems.webp"}
-              width={600}
-              height={300}
-              priority
-              className="object-contain"
-              alt=" Hybrid Power System"
-            />
-          </div>
-
-          {/* Content */}
-          <div className="flex-1 space-y-5 p-6" data-aos="fade-up">
-            <h3 className="josefin-sans text-1xl lg:text-2xl font-semibold text-gray-800 leading-tight">
-              Why Choose Hybrid Power Systems
-            </h3>
-            <p className="text-lg text-gray-600">
-              Hybrid power systems ensure continuous energy availability by
-              seamlessly switching between solar, battery backup, and grid power.
-              They reduce dependency on the grid while maximizing energy savings
-              and reliability.
-            </p>
-            <ul className="space-y-4" data-aos="fade-up">
-              {[
-                "Uninterrupted power using solar, battery, and grid",
-                "Reduced electricity bills with smart energy usage",
-                "Reliable backup during power cuts and outages",
-              ].map((text, i) => (
-                <li
-                  key={i}
-                  className="flex items-start bg-[#FDE8E9] p-5"
-                >
-                  <span className="mr-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#E91414] text-white">
-                    <svg
-                      aria-hidden="true"
-                      className="w-4 h-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                      fill="currentColor"
-                    >
-                      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-                    </svg>
-                  </span>
-
-                  <span className="text-gray-800 font-medium">
-                    {text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Energy Assessment",
+              desc: "Analyze your energy consumption and power backup needs to design the ideal hybrid system.",
+              points: [
+                "Load and usage analysis",
+                "Solar and battery sizing",
+                "System feasibility planning",
+              ],
+            },
+            {
+              title: "System Installation",
+              desc: "Professional installation of solar panels, hybrid inverters, and battery storage systems.",
+              points: [
+                "Hybrid inverter configuration",
+                "Battery bank integration",
+                "Grid synchronization setup",
+              ],
+            },
+            {
+              title: "Monitoring & Support",
+              desc: "Continuous monitoring and maintenance to ensure optimal performance and long system life.",
+              points: [
+                "Real-time energy monitoring",
+                "Preventive maintenance support",
+                "System upgrades & optimization",
+              ],
+            },
+          ].map((step, i) => (
+            <div
+              key={i}
+              className="bg-gray-100 p-6 rounded"
+              data-aos="fade-up"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {step.title}
+              </h3>
+              <p className="text-gray-600 mb-4">{step.desc}</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                {step.points.map((p, idx) => (
+                  <li key={idx}>{p}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-
-        {/* Why Choose Us */}
-        <div>
-          <h2
-            className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
-            data-aos="fade-up"
-          >
-            Why Choose Us for Hybrid Power Systems?
-          </h2>
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
-            {[
-              "Advanced Hybrid Inverter Technology",
-              "High-Capacity Battery Storage Solutions",
-              "Expert System Design & Installation",
-              "24/7 Power Reliability",
-              "Energy Optimization & Smart Monitoring",
-              "Cost-Effective Long-Term Savings",
-            ].map((text, index) => (
-              <div
-                key={index}
-                data-aos="zoom-in"
-                className="bg-[#FDE8E8] border border-[#E91414] p-6 shadow-sm flex items-center justify-center text-center hover:shadow-md transition"
-              >
-                <p className="text-lg font-semibold text-[#8A0E0E]">
-                  {text}
-                </p>
+      </section>
+           {/* Image + Content */}
+            <section className="flex flex-col lg:flex-row items-center gap-10 py-10">
+              {/* Image */}
+              <div className="flex-1" data-aos="zoom-in">
+                <Image
+                  src="/service/hybrid-invert.webp"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto object-contain"
+                  alt="Hybrid Inverter"
+                />
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Core Process */}
-        <div className="w-full mt-10 mb-10">
-          <h2
-            className="mt-10 josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight ml-3"
-            data-aos="fade-up"
-          >
-            Core Steps of Our Hybrid System Installation
-          </h2>
-          <div className="justify-center gap-20 items-start lg:flex-row flex-col space-y-6 py-5">
-            {/* Assessment */}
-            <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Energy Assessment
-              </h2>
-              <p className="text-lg text-gray-600">
-                Analyze your energy consumption and power backup needs to design
-                the ideal hybrid system.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Load and usage analysis</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Solar and battery sizing</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">System feasibility planning</span></li>
-              </ul>
-            </div>
-
-            {/* Installation */}
-            <div className="space-y-6 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                System Installation
-              </h2>
-              <p className="text-lg text-gray-600">
-                Professional installation of solar panels, hybrid inverters, and
-                battery storage systems.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Hybrid inverter configuration</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Battery bank integration</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Grid synchronization setup</span></li>
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div className="space-y-6 bg-gray-100 p-5" data-aos="fade-up">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 leading-tight">
-                Monitoring & Support
-              </h2>
-              <p className="text-lg text-gray-600">
-                Continuous monitoring and maintenance to ensure optimal
-                performance and long system life.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li><span className="text-lg font-semibold text-gray-700">Real-time energy monitoring</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">Preventive maintenance support</span></li>
-                <li><span className="text-lg font-semibold text-gray-700">System upgrades & optimization</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+      
+              {/* Content */}
+              <div className="flex-1 space-y-6" data-aos="fade-up">
+                <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+                  Hybrid Inverter (3kw - 80kw)
+                </h2>
+      
+               
+      <ul className="space-y-4 list-disc pl-6">
+        {[
+          "Supports On-grid,Off-Grid and Hybrid modes with 4-millisecond switching time",
+          "Compatible with Lead-Acid and Lithium Battery Types",
+          "Built-in zero-export feature",
+          "24x7 uninterrupted power supply",
+          "Programmable charge/discharge control",
+          "Parallel operation of up to 16units",
+          "100% unbalanced load output support"
+        ].map((text, i) => (
+          <li key={i} className="text-gray-800 font-medium">
+            {text}
+          </li>
+        ))}
+      </ul>
+      
+              </div>
+            </section>
+              {/* Image + Content */}
+            <section className="flex flex-col lg:flex-row-reverse items-center gap-10 py-10">
+              {/* Image */}
+              <div className="flex-1" data-aos="zoom-in">
+                <Image
+                  src="/service/micro-inverter.webp"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto object-contain"
+                  alt="Micro inverter"
+                />
+              </div>
+      
+              {/* Content */}
+              <div className="flex-1 space-y-6" data-aos="fade-up">
+                <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+                  Micro Inverter (0.6kw - 2.2kw)
+                </h2>
+      
+               
+      <ul className="space-y-4 list-disc pl-6">
+        {[
+          "IP67- rated protection",
+          "Simple plug-and-play installation",
+          "AC-coupled system suitable for retrofitting existing setups",
+          "Supports UPS functionality",
+          "25-year design life with a 10-year warranty",
+        ].map((text, i) => (
+          <li key={i} className="text-gray-800 font-medium">
+            {text}
+          </li>
+        ))}
+      </ul>
+      
+              </div>
+            </section>
+    </main>
   );
 }

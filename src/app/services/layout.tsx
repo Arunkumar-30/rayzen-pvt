@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Our Services - Rayzen Power Private Limited",
     description:
       "Discover Rayzen Power Private Limited's expert services in solar, hybrid, lithium ESS, and home automation for residential and commercial setups.",
-    url: "https://www.rayzenpower.com/services", // update with actual services page URL
+    url: "https://www.rayzenpower.com/services", 
     siteName: "Rayzen Power Private Limited",
     type: "website",
   },

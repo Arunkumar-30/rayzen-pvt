@@ -24,7 +24,7 @@ const NavbarComponent = () => {
         { label: "CCTV Security Cameras", href: "/services/cctv-security" },
       ],
     },
-    { href: "/career", label: "Career" },
+    { href: "/careers", label: "Careers" },
   ];
 
   return (
@@ -35,10 +35,11 @@ const NavbarComponent = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo/rayzen_power.png"
+              src="/logo/rayzen_power.webp"
               width={100}
               height={100}
-              className="object-contain"
+         className="w-40 h-auto"
+
               priority
               alt="Rayzen Power Logo"
             />
@@ -80,8 +81,8 @@ const NavbarComponent = () => {
                     className={`py-2 border-b-2 transition duration-300
                       ${
                         isActive
-                          ? "border-[#E91414] text-[#E91414] font-bold"
-                          : "border-transparent hover:border-[#E91414]"
+                          ? "border-[#d11a19] text-[#d11a19] font-bold"
+                          : "border-transparent hover:border-[#d11a19]"
                       }
                     `}
                   >
@@ -104,7 +105,7 @@ const NavbarComponent = () => {
                           <li key={idx}>
                             <Link
                               href={item.href}
-                              className="block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-[#E91414]"
+                              className="block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-[#d11a19]"
                             >
                               {item.label}
                             </Link>
@@ -122,7 +123,7 @@ const NavbarComponent = () => {
           <div className="hidden lg:flex">
             <Link
               href="/contact-us"
-              className="px-6 py-2 rounded-full bg-[#E91414] text-white font-semibold hover:bg-black transition"
+              className="px-6 py-2 rounded-full bg-[#d11a19] text-white font-semibold hover:bg-black transition"
             >
               Contact Us
             </Link>

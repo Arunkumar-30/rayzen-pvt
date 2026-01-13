@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import CommonBannerComponent from "./CommonBanner";
 import axios from "axios";
-import Image from "next/image";
+
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -77,7 +77,7 @@ export default function ContactSection() {
         {/* Contact Info Cards */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div
-            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#E91414]"
+            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
@@ -89,7 +89,7 @@ export default function ContactSection() {
             </p>
           </div>
           <div
-            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#E91414]"
+            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
@@ -101,7 +101,7 @@ export default function ContactSection() {
             </p>
           </div>
           <div
-            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#E91414]"
+            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
@@ -117,7 +117,7 @@ export default function ContactSection() {
           {/* Left Section */}
           <div>
             <h3
-              className="text-primary text-lg font-medium mb-2 border-l-4 border-[#E91414] pl-2"
+              className="text-primary text-lg font-medium mb-2 border-l-4 border-[#d11a19] pl-2"
               data-aos="fade-up"
               data-aos-duration="2000"
             >
@@ -138,7 +138,7 @@ export default function ContactSection() {
               Click the link below for a free consultation with Rayzen Power
             </p>
 
-            <div
+            {/* <div
               className="flex items-center gap-4"
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -175,7 +175,7 @@ export default function ContactSection() {
                  Expert Solar Installation, Lithium Storage & Smart Energy Solutions
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Section - Form */}
@@ -193,7 +193,7 @@ export default function ContactSection() {
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 required
-                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#E91414]"
+                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
               />
               <input
                 type="email"
@@ -204,7 +204,7 @@ export default function ContactSection() {
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 required
-                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#E91414]"
+                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
               />
             </div>
 
@@ -218,13 +218,13 @@ export default function ContactSection() {
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 required
-                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#E91414]"
+                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
               />
               <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#E91414]"
+                className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 required
@@ -246,12 +246,12 @@ export default function ContactSection() {
               data-aos="fade-up"
               data-aos-duration="2000"
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#E91414]"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full py-3 rounded-md bg-gradient-to-r from-[#E91414] to-[#E91414] text-white font-semibold hover:from-red-600 hover:to-red-700"
+              className="w-full py-3 rounded-md bg-gradient-to-r from-[#d11a19] to-[#d11a19] text-white font-semibold hover:from-red-600 hover:to-red-700"
               data-aos="fade-up"
               data-aos-duration="2000"
             >

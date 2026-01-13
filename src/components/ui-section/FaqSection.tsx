@@ -39,7 +39,7 @@ export default function FaqAccordion() {
         data-aos="fade-up"
         data-aos-duration="2000"
       >
-        Frequently Asked <span className="text-[#e91414]">Questions</span>
+        Frequently Asked <span className="text-[#d11a19]">Questions</span>
       </h2>
       <div className="max-w-5xl mx-auto space-y-4">
         {faqData.map((item, idx) => (

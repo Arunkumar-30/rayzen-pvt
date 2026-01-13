@@ -55,7 +55,7 @@ const Service = () => {
       Complete Solar Solutions
     </p>
 
-    <span className="inline-block my-2 h-[3px] w-12 bg-[#E91414]" />
+    <span className="inline-block my-2 h-[3px] w-12 bg-[#d11a19]" />
 
     <h2 className="text-3xl font-semibold text-white">
       Installation, Maintenance & Support
@@ -65,7 +65,7 @@ const Service = () => {
        {/* Custom Arrows */}
 <div className="flex gap-3">
   <button
-    className="service-prev w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#E91414] group transition"
+    className="service-prev w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#d11a19] group transition"
     aria-label="Previous service"
   >
     <svg
@@ -85,7 +85,7 @@ const Service = () => {
   </button>
 
   <button
-    className="service-next w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#E91414] group transition"
+    className="service-next w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center hover:bg-[#d11a19] group transition"
     aria-label="Next service"
   >
     <svg
@@ -143,7 +143,7 @@ const Service = () => {
                 </p>
  <Link
         href={service.link}
-        className="inline-flex items-center gap-3 rounded-full bg-[#E91414] px-6 py-3 text-white text-sm font-medium transition-all duration-300 hover:bg-[#C70F0F] group"
+        className="inline-flex items-center gap-3 rounded-full bg-[#d11a19] px-6 py-3 text-white text-sm font-medium transition-all duration-300 hover:bg-[#C70F0F] group"
         data-aos="fade-up"
         data-aos-duration="2000"
       >
