@@ -72,7 +72,6 @@ export default function RootLayout({
 
         {/* Main Content Landmark */}
         <main id="main-content" role="main">
-          <AOSProvider/>
           {children}
         </main>
 
