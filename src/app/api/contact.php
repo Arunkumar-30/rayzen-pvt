@@ -16,7 +16,7 @@ $service  = htmlspecialchars($data['service'] ?? '');
 $message  = nl2br(htmlspecialchars($data['message'] ?? ''));
 
 // Prepare the email
-$to = 'karthirs602@gmail.com'; // Replace with your email address
+$to = 'info@rayzenpower.com'; // Replace with your email address
 $subject = 'New Contact Form Submission';
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8\r\n";
