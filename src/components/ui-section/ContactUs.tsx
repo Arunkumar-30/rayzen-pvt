@@ -14,7 +14,7 @@ export default function ContactSection() {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
 
 
 
@@ -137,44 +137,7 @@ export default function ContactSection() {
               Click the link below for a free consultation with Rayzen Power
             </p>
 
-            {/* <div
-              className="flex items-center gap-4"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-               <Image
-    src="/logo/Logo.jpg"
-    alt="Rayzen Power Logo"
-    width={96}
-    height={96}
-    priority
-    className="rounded-full object-cover"
-  />
-              <div>
-                <p
-                  className="font-bold text-lg"
-                  data-aos="fade-up"
-                  data-aos-duration="2000"
-                >
-                  Rayzen Power Private Limited
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-1"
-                  >
-                    🔗
-                  </a>
-                </p>
-                <p
-                  className="text-gray-500"
-                  data-aos="fade-up"
-                  data-aos-duration="2000"
-                >
-                 Expert Solar Installation, Lithium Storage & Smart Energy Solutions
-                </p>
-              </div>
-            </div> */}
+           
           </div>
 
           {/* Right Section - Form */}
