@@ -50,20 +50,22 @@ const BannerSlider = () => {
             </div>
 
             {/* Right-side image */}
-            <div
-              className="flex justify-center sm:justify-end"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              <Image
-                src="/home/img3.webp"
-                width={600}
-                height={600}
-                alt="Solar Panel Installation"
-                priority
-                className="object-contain w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px]"
-              />
-            </div>
+         <div className="flex justify-center sm:justify-end w-full sm:w-auto" data-aos="fade-up" data-aos-duration="2000">
+  <Image
+    src="/home/img3.webp"
+    alt="Solar Panel Installation"
+    width={600}
+    height={600}
+    priority
+    quality={75}
+    sizes="(max-width: 640px) 100vw,
+           (max-width: 768px) 50vw,
+           (max-width: 1024px) 50vw,
+           600px"
+    className="object-contain w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]"
+  />
+</div>
+
           </div>
         </div>
       </div>

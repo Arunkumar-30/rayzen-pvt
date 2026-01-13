@@ -146,6 +146,7 @@ const About = () => {
               height={500}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               priority
+      
 
             />
           </div>
