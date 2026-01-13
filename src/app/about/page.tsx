@@ -140,7 +140,7 @@ const About = () => {
             data-aos-duration="2000"
           >
             <Image
-              src="/home/img3.webp"
+              src="/home/vector.webp"
               alt="Rayzen Power solar solutions"
               width={500}
               height={500}
