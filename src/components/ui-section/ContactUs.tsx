@@ -17,7 +17,6 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
 
 
-  console.log(loading);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -32,7 +31,7 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
-      // console.log("Submitting form data:", formData);
+    
       const res = await axios.post(
         "https://www.rayzenpower.com/contact.php",
         // "/api/contact",
