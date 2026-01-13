@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarComponent from "@/components/navbar/Navbar";
 import FooterComponent from "@/components/footer/footer";
+import AOSProvider from "@/components/ui-section/AOSprovider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,7 @@ export default function RootLayout({
 
         {/* Main Content Landmark */}
         <main id="main-content" role="main">
+          <AOSProvider/>
           {children}
         </main>
 
