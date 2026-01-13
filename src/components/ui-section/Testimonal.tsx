@@ -14,8 +14,8 @@ export default function TestimonialSlider() {
 
   const testimonials = [
     {
-      name: "Arunkumar",
-      role: "Frontend Developer",
+      name: "kumar",
+      role: "Home Owner",
       text: "Rayzen Power delivered excellent solar solutions with professional installation and great after-sales support.",
     },
     {
