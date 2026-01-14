@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import CommonBannerComponent from "./CommonBanner";
 import axios from "axios";
 
-
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     fullname: "",
@@ -14,9 +13,11 @@ export default function ContactSection() {
     message: "",
   });
 
-  const [, setLoading] = useState(false);
-
-
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | "";
+    message: string;
+  }>({ type: "", message: "" });
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -29,12 +30,11 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setStatus({ type: "", message: "" });
 
     try {
-    
       const res = await axios.post(
         "https://www.rayzenpower.com/contact.php",
-        // "/api/contact",
         formData,
         {
           headers: {
@@ -44,7 +44,11 @@ export default function ContactSection() {
       );
 
       if (res.status === 200) {
-        alert("Message sent successfully!");
+        setStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
+
         setFormData({
           fullname: "",
           email: "",
@@ -59,11 +63,16 @@ export default function ContactSection() {
         err.response?.data?.error &&
         Array.isArray(err.response.data.error)
       ) {
-        alert("Error: " + err.response.data.error.join("\n"));
+        setStatus({
+          type: "error",
+          message: err.response.data.error.join(", "),
+        });
       } else {
-        alert("Server error. Try again later.");
+        setStatus({
+          type: "error",
+          message: "Server error. Please try again later.",
+        });
       }
-      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -72,124 +81,86 @@ export default function ContactSection() {
   return (
     <div>
       <CommonBannerComponent title="Contact Us" />
+
       <section className="bg-white px-4 py-12 sm:px-6 lg:px-20">
-        {/* Contact Info Cards */}
+        {/* Contact Info */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div
-            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            <h3 className="text-lg lg:text-xl xl:text-2xl font-[500] mb-1">
-              Location
-            </h3>
-            <p className="text-[#585858] text-md xl:text-lg mt-1 font-[400]">
-              K1/264, 567, Pollachi Main Rd, Raj Vijay Nagar, Eachanari, Coimbatore, Tamil Nadu - 641021
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]">
+            <h3 className="text-xl font-medium">Location</h3>
+            <p className="text-gray-600 mt-1">
+              K1/264, 567, Pollachi Main Rd, Eachanari, Coimbatore, Tamil Nadu - 641021
             </p>
           </div>
-          <div
-            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            <h3 className="text-lg lg:text-xl xl:text-2xl font-[500] mb-1">
-              Phone
-            </h3>
-            <p className="text-[#585858] text-md xl:text-lg mt-1 font-[400]">
-              +91 9840821382
-            </p>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]">
+            <h3 className="text-xl font-medium">Phone</h3>
+            <p className="text-gray-600 mt-1">+91 9840821382</p>
           </div>
-          <div
-            className="bg-white text-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            <h3 className="text-lg lg:text-xl xl:text-2xl font-[500] mb-1">
-              Email
-            </h3>
-            <p className="text-[#585858] text-md xl:text-lg mt-1 font-[400]">
-              info@rayzenpower.com
-            </p>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]">
+            <h3 className="text-xl font-medium">Email</h3>
+            <p className="text-gray-600 mt-1">info@rayzenpower.com</p>
           </div>
         </div>
+
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
-          {/* Left Section */}
+          {/* Left Content */}
           <div>
-            <h3
-              className="text-primary text-lg font-medium mb-2 border-l-4 border-[#d11a19] pl-2"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <h3 className="text-lg font-medium border-l-4 border-[#d11a19] pl-2 mb-2">
               Contact Us
             </h3>
-            <h2
-              className="text-3xl sm:text-4xl font-bold mb-4"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Do you have any questions?
             </h2>
-            <p
-              className="text-[#585858] text-md xl:text-lg mt-1 font-[400] mb-6"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              Click the link below for a free consultation with Rayzen Power
+            <p className="text-gray-600 mb-6">
+              Click the form to get a free consultation with Rayzen Power.
             </p>
-
-           
           </div>
 
-          {/* Right Section - Form */}
+          {/* Contact Form */}
           <form
-            className="bg-[#f5f8fc] mt-8 p-6 rounded-lg shadow space-y-4"
             onSubmit={handleSubmit}
+            className="bg-[#f5f8fc] p-6 rounded-lg shadow space-y-4"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 name="fullname"
                 placeholder="Full Name"
                 value={formData.fullname}
                 onChange={handleChange}
-                data-aos="fade-up"
-                data-aos-duration="2000"
                 required
-                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
+                className="px-4 py-3  rounded-md border focus:ring-2 focus:ring-[#d11a19]"
               />
+
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                data-aos="fade-up"
-                data-aos-duration="2000"
                 required
-                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
+                className="px-4 py-3 rounded-md border focus:ring-2 focus:ring-[#d11a19]"
               />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <input
                 type="tel"
                 name="phone"
                 placeholder="Phone Number"
                 value={formData.phone}
                 onChange={handleChange}
-                data-aos="fade-up"
-                data-aos-duration="2000"
                 required
-                className="px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
+                className="px-4 py-3 rounded-md border focus:ring-2 focus:ring-[#d11a19]"
               />
+
               <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
-                data-aos="fade-up"
-                data-aos-duration="2000"
                 required
+                className="px-4 py-3 rounded-md border focus:ring-2 focus:ring-[#d11a19]"
               >
                 <option value="">Select a Service</option>
                 <option value="solar-power-installation">Solar Power Installation</option>
@@ -205,41 +176,34 @@ export default function ContactSection() {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              data-aos="fade-up"
-              data-aos-duration="2000"
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#d11a19]"
-            ></textarea>
+              className="w-full px-4 py-3 rounded-md border focus:ring-2 focus:ring-[#d11a19]"
+            />
 
             <button
               type="submit"
-              className="w-full py-3 rounded-md bg-gradient-to-r from-[#d11a19] to-[#d11a19] text-white font-semibold hover:from-red-600 hover:to-red-700"
-              data-aos="fade-up"
-              data-aos-duration="2000"
+              disabled={loading}
+              className={`w-full py-3 rounded-md text-white font-semibold transition ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-[#d11a19] hover:bg-red-700"
+              }`}
             >
-              Submit
+              {loading ? "Sending..." : "Submit"}
             </button>
 
-            {/* {status && (
-              <p className="text-sm text-center text-green-600 pt-2">
-                {status}
+            {status.message && (
+              <p
+                className={`text-sm text-center pt-2 ${
+                  status.type === "success"
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {status.message}
               </p>
-            )} */}
+            )}
           </form>
-        </div>
-      </section>
-      <section>
-        <div data-aos="fade-up" data-aos-duration="2000">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6255851206906!2d76.98786107408932!3d10.916033356605022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85ba3a8e1ff51%3A0x6d9c4a38882fae17!2sRayzen%20Power%20Private%20Limited!5e0!3m2!1sen!2sin!4v1767877145600!5m2!1sen!2sin"
-            width="100%"
-            height="350"
-            style={{ border: 0 }}
-            className="card"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-         
         </div>
       </section>
     </div>
