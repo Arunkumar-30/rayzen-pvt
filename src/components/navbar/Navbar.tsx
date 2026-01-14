@@ -14,7 +14,7 @@ const NavbarComponent = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     {
-      href: "#services",
+      href: "/services/solar-power-installation",
       label: "Services",
       dropdown: [
         { label: "Solar Power Installation", href: "/services/solar-power-installation" },
