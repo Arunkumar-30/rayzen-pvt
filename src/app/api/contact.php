@@ -1,44 +1,69 @@
 <?php
-header('Content-Type: application/json');
+header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// Capture and decode the JSON input
-$data = json_decode(file_get_contents('php://input'), true);
-$response = array();
+// Read JSON input
+$data = json_decode(file_get_contents("php://input"), true);
 
-// Sanitize the input
-$fullname = htmlspecialchars($data['fullname'] ?? '');
-$email    = htmlspecialchars($data['email'] ?? '');
-$phone    = htmlspecialchars($data['phone'] ?? '');
-$service  = htmlspecialchars($data['service'] ?? '');
-$message  = nl2br(htmlspecialchars($data['message'] ?? ''));
+if (!$data) {
+  http_response_code(400);
+  echo json_encode(["error" => "Invalid request data"]);
+  exit;
+}
 
-// Prepare the email
-$to = 'info@rayzenpower.com'; // Replace with your email address
-$subject = 'New Contact Form Submission';
-$headers = "MIME-Version: 1.0\r\n";
+// Sanitize inputs
+$fullname = htmlspecialchars(trim($data['fullname'] ?? ''));
+$email    = htmlspecialchars(trim($data['email'] ?? ''));
+$phone    = htmlspecialchars(trim($data['phone'] ?? ''));
+$service  = htmlspecialchars(trim($data['service'] ?? ''));
+$message  = nl2br(htmlspecialchars(trim($data['message'] ?? '')));
+
+// Validation
+$errors = [];
+
+if (empty($fullname)) $errors[] = "Full name is required";
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Valid email required";
+if (empty($phone)) $errors[] = "Phone number required";
+if (empty($service)) $errors[] = "Service is required";
+if (empty($message)) $errors[] = "Message is required";
+
+if (!empty($errors)) {
+  http_response_code(422);
+  echo json_encode(["error" => $errors]);
+  exit;
+}
+
+// Email setup
+$to = "info@rayzenpower.com";
+$subject = "New Contact Form Submission - Rayzen Power";
+
+// IMPORTANT: Use domain email as sender
+$headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-$headers .= 'From: ' . $email . "\r\n";
-$headers .= 'Reply-To: ' . $email . "\r\n";
+$headers .= "From: Rayzen Power <no-reply@rayzenpower.com>\r\n";
+$headers .= "Reply-To: $email\r\n";
 
 // Email body
-$body = '<html><body>';
-$body .= '<h2>Contact Form Submission</h2>';
-$body .= '<p><strong>Full Name:</strong> ' . $fullname . '</p>';
-$body .= '<p><strong>Email:</strong> ' . $email . '</p>';
-$body .= '<p><strong>Phone:</strong> ' . $phone . '</p>';
-$body .= '<p><strong>Service:</strong> ' . $service . '</p>';
-$body .= '<p><strong>Message:</strong></p>';
-$body .= '<p>' . $message . '</p>';
-$body .= '</body></html>';
+$body = "
+<html>
+<body>
+  <h2>Contact Form Submission</h2>
+  <p><strong>Full Name:</strong> {$fullname}</p>
+  <p><strong>Email:</strong> {$email}</p>
+  <p><strong>Phone:</strong> {$phone}</p>
+  <p><strong>Service:</strong> {$service}</p>
+  <p><strong>Message:</strong></p>
+  <p>{$message}</p>
+</body>
+</html>
+";
 
-// Send the email
+// Send email
 if (mail($to, $subject, $body, $headers)) {
-    echo json_encode(['message' => 'Email sent successfully.']);
+  echo json_encode(["success" => true, "message" => "Email sent successfully"]);
 } else {
-    http_response_code(500);
-    echo json_encode(['error' => 'Failed to send email.']);
+  http_response_code(500);
+  echo json_encode(["error" => "Failed to send email"]);
 }
-?>
