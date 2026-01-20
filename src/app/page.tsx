@@ -5,6 +5,7 @@ import TestimonialSlider from "@/components/ui-section/Testimonal";
 import WhyChooseUs from "@/components/ui-section/WhyChooseUs";
 import Image from "next/image";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +64,33 @@ export default function Home() {
        </section>
 
   <TestimonialSlider/>
+   <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Rayzen Power?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Rayzen Power Private Limited is a leading manufacturer of high-quality power solutions in India."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide hybrid solar solutions?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we provide solar, hybrid, and energy storage solutions for homes and businesses."
+                }
+              }
+            ]
+          })
+        }}
+      />
   </>
   );
 }

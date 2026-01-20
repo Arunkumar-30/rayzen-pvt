@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import CommonBannerComponent from "./CommonBanner";
 import axios from "axios";
 
+
+
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     fullname: "",
@@ -34,7 +36,7 @@ export default function ContactSection() {
 
     try {
       const res = await axios.post(
-        "https://www.rayzenpower.com/contact.php",
+        "https://rayzenpower.com/contact.php",
         formData,
         {
           headers: {
