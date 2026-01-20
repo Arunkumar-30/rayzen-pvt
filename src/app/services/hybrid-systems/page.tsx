@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Hybrid Power Systems - Rayzen Power",
@@ -47,7 +48,33 @@ export const metadata: Metadata = {
   },
 };
 export default function HybridSystems() {
+
   return (
+    <>
+     <Script
+        id="hybrid-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Hybrid Power Systems",
+            description:
+              "Hybrid Power Systems combining solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
+            provider: {
+              "@type": "Organization",
+              name: "Rayzen Power Private Limited",
+              url: "https://www.rayzenpower.com",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India",
+            },
+            serviceType: "Hybrid Power System Installation",
+            url: "https://rayzenpower.com/services/hybrid-systems",
+          }),
+        }}
+      />
    <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
@@ -286,5 +313,6 @@ export default function HybridSystems() {
               </div>
             </section>
     </main>
+    </>
   );
 }

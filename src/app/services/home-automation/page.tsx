@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Home Automation Solutions - Rayzen Power",
@@ -48,9 +49,35 @@ export const metadata: Metadata = {
 };
 export default function HomeAutomation() {
   return (
+    <>
+        <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Home Automation Solutions",
+            "description":
+              "Smart home automation solutions for controlling lighting, appliances, climate, and security for enhanced comfort, safety, and energy efficiency.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Rayzen Power Private Limited",
+              "url": "https://www.rayzenpower.com"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "serviceType": "Smart Home Automation",
+            "url": "https://rayzenpower.com/services/home-automation"
+          }),
+        }}
+      />
      <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
+  
         className="flex flex-col lg:flex-row items-center justify-between gap-4"
         data-aos="fade-up"
       >
@@ -209,5 +236,6 @@ export default function HomeAutomation() {
         </div>
       </section>
     </main>
+      </>
   );
 }

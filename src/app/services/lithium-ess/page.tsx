@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Lithium Energy Storage Systems (ESS) - Rayzen Power",
@@ -48,6 +49,31 @@ export const metadata: Metadata = {
 };
 export default function LithiumEnergyStorage() {
   return (
+    <>
+     <Script
+        id="lithium-ess-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Lithium Energy Storage Systems (ESS)",
+            description:
+              "Rayzen Power offers advanced Lithium Energy Storage Systems (ESS) for residential, commercial, and industrial applications. High performance, long life, and reliable backup power.",
+            provider: {
+              "@type": "Organization",
+              name: "Rayzen Power Private Limited",
+              url: "https://www.rayzenpower.com",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India",
+            },
+            serviceType: "Energy Storage System Installation",
+            url: "https://rayzenpower.com/services/lithium-ess",
+          }),
+        }}
+      />
     <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
@@ -248,5 +274,6 @@ export default function LithiumEnergyStorage() {
 </section>
 
     </main>
+    </>
   );
 }

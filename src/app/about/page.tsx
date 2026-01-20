@@ -1,6 +1,7 @@
 import CommonBannerComponent from "@/components/ui-section/CommonBanner";
 import Image from "next/image";
 import { Metadata } from "next";
+import Script from "next/script";
 
 
 // SEO Metadata
@@ -51,6 +52,32 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <>
+    <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Rayzen Power Private Limited",
+            url: "https://www.rayzenpower.com",
+            logo: "https://www.rayzenpower.com/fav.png",
+            sameAs: [
+              "https://www.facebook.com/RayzenPower",
+              "https://www.linkedin.com/company/rayzen-power",
+              "https://www.instagram.com/rayzenpower",
+              "https://twitter.com/RayzenPower"
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+91-XXXXXXXXXX",
+              contactType: "Customer Service",
+              areaServed: "IN"
+            },
+            description: "Rayzen Power is a leading solar energy company in India, providing solar panels, lithium batteries, and inverters for residential and commercial setups."
+          }),
+        }}
+      />
       {/* Banner Section */}
       <CommonBannerComponent title="About Us" />
 

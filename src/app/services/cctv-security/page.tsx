@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
+
 
 export const metadata: Metadata = {
   title: "CCTV Security Cameras - Rayzen Power",
@@ -48,7 +50,31 @@ export const metadata: Metadata = {
 };
 export default function CCTVSecurityCameras() {
   return (
-    
+    <>
+           <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "CCTV Security Camera Installation",
+            "description":
+              "Professional CCTV security camera installation services for homes, businesses, and industrial premises.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Rayzen Power Private Limited",
+              "url": "https://www.rayzenpower.com",
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India",
+            },
+            "serviceType": "CCTV Surveillance Systems",
+            "url": "https://rayzenpower.com/services/cctv-security",
+          }),
+        }}
+      />
     <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-16 space-y-8">
       {/* Header */}
       <header
@@ -56,7 +82,8 @@ export default function CCTVSecurityCameras() {
         data-aos="fade-up"
       >
         <h1 className="josefin-sans text-2xl lg:text-3xl font-semibold text-gray-800">
-          CCTV Security Camera Systems
+       CCTV Security Camera Installation Services
+
         </h1>
 
         <Link
@@ -72,9 +99,8 @@ export default function CCTVSecurityCameras() {
         className="text-lg font-medium text-gray-700 max-w-4xl"
         data-aos="fade-up"
       >
-        Protect your property with advanced CCTV security camera systems designed
-        for real-time monitoring, crime prevention, and complete peace of mind
-        for homes, businesses, and industrial premises.
+       CCTV security camera installation provides real-time monitoring, crime prevention, and reliable surveillance for homes and businesses. Professional CCTV systems include HD cameras, night vision, remote access, and secure video storage.
+
       </p>
 
  
@@ -212,5 +238,6 @@ export default function CCTVSecurityCameras() {
         </div>
       </section>
     </section>
+    </>
   );
 }

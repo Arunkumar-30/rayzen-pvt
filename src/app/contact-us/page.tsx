@@ -1,5 +1,6 @@
 import ContactUsComponent from "@/components/ui-section/ContactUs";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Contact Us - Rayzen Power Private Limited", // Unique page title
@@ -20,6 +21,30 @@ const ContactUs = () => {
   return (
     <>
       <ContactUsComponent />
+      <Script
+        id="contactpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Us - Rayzen Power Private Limited",
+            "url": "https://www.rayzenpower.com/contact-us",
+            "description":
+              "Get in touch with Rayzen Power Private Limited for inquiries, support, or consultation regarding solar, hybrid, and home automation solutions.",
+            "contactOption": ["TollFree", "CustomerSupport"],
+            "contactType": "Customer Service",
+            "telephone": "+91-XXXXXXXXXX",
+            "email": "info@rayzenpower.com",
+            "sameAs": [
+              "https://www.facebook.com/RayzenPower",
+              "https://www.linkedin.com/company/rayzen-power",
+              "https://www.instagram.com/rayzenpower",
+              "https://twitter.com/RayzenPower"
+            ]
+          }),
+        }}
+      />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Solar Power Installation - Rayzen Power",
@@ -49,6 +50,30 @@ export const metadata: Metadata = {
 export default function SolarPower() {
   return (
     <>
+     <Script
+        id="solar-power-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Solar Power Installation",
+            description:
+              "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
+            provider: {
+              "@type": "Organization",
+              name: "Rayzen Power Private Limited",
+              url: "https://www.rayzenpower.com",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India",
+            },
+            serviceType: "Solar Panel Installation",
+            url: "https://rayzenpower.com/services/solar-power",
+          }),
+        }}
+      />
     <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
