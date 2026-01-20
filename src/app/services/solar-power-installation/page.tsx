@@ -7,14 +7,20 @@ export const metadata: Metadata = {
   title: "Solar Power Installation - Rayzen Power",
   description:
     "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
-  keywords:
-    "solar power installation, solar panels, renewable energy, Rayzen Power, solar energy, commercial solar, residential solar",
+  keywords:[
+"solar power installation, solar panels, renewable energy, Rayzen Power, solar energy, commercial solar, residential solar",
+  ],
+    
+    alternates: {
+  canonical: "https://rayzenpower.com/services/solar-power-installation",
+},
+
   openGraph: {
     title: "Solar Power Installation - Rayzen Power",
     description:
       "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
     siteName: "Rayzen Power",
-    url: "https://rayzenpower.com/services/solar-power",
+    url: "https://rayzenpower.com/services/solar-power-installation",
     type: "website",
     locale: "en_IN",
     images: [
@@ -50,30 +56,37 @@ export const metadata: Metadata = {
 export default function SolarPower() {
   return (
     <>
-     <Script
-        id="solar-power-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Solar Power Installation",
-            description:
-              "Discover high-efficiency solar power solutions for homes, businesses, and industrial setups. Maximize energy output, reduce costs, and enjoy sustainable energy with Rayzen Power.",
-            provider: {
-              "@type": "Organization",
-              name: "Rayzen Power Private Limited",
-              url: "https://www.rayzenpower.com",
-            },
-            areaServed: {
-              "@type": "Country",
-              name: "India",
-            },
-            serviceType: "Solar Panel Installation",
-            url: "https://rayzenpower.com/services/solar-power",
-          }),
-        }}
-      />
+   <Script
+  id="breadcrumb-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rayzenpower.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rayzenpower.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Solar Power Installation",
+          "item": "https://rayzenpower.com/services/solar-power-installation"
+        }
+      ]
+    })
+  }}
+/>
+
     <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
@@ -293,6 +306,43 @@ export default function SolarPower() {
         </div>
       </section>
     </main>
+    <Script
+  id="faq-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is solar power installation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solar power installation involves setting up solar panels, inverters, and electrical systems to generate electricity from sunlight for homes and businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does solar installation cost in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost of solar installation in India depends on system size, panel type, and site conditions. Residential systems typically start from 1kW and scale based on energy needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a solar panel system last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most solar panels last 25 years or more, with minimal efficiency loss over time when properly maintained."
+          }
+        }
+      ]
+    })
+  }}
+/>
+
     </>
   );
 }

@@ -7,8 +7,18 @@ export const metadata: Metadata = {
   title: "Hybrid Power Systems - Rayzen Power",
   description:
     "Discover Rayzen Power's Hybrid Power Systems that combine solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
-  keywords:
-    "hybrid power system, solar hybrid system, hybrid inverter, battery storage, grid power backup, renewable energy, Rayzen Power",
+ keywords: [
+  "hybrid power systems in India",
+  "solar hybrid power system",
+  "hybrid inverter installation",
+  "battery storage hybrid system",
+  "Rayzen Power hybrid solutions"
+],
+
+    alternates: {
+  canonical: "https://www.rayzenpower.com/services/hybrid-systems",
+},
+
   openGraph: {
     title: "Hybrid Power Systems - Rayzen Power",
     description:
@@ -51,30 +61,37 @@ export default function HybridSystems() {
 
   return (
     <>
-     <Script
-        id="hybrid-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Hybrid Power Systems",
-            description:
-              "Hybrid Power Systems combining solar energy, battery storage, and grid power for reliable, efficient, and cost-effective electricity solutions.",
-            provider: {
-              "@type": "Organization",
-              name: "Rayzen Power Private Limited",
-              url: "https://www.rayzenpower.com",
-            },
-            areaServed: {
-              "@type": "Country",
-              name: "India",
-            },
-            serviceType: "Hybrid Power System Installation",
-            url: "https://rayzenpower.com/services/hybrid-systems",
-          }),
-        }}
-      />
+<Script
+  id="breadcrumb-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.rayzenpower.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.rayzenpower.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hybrid Power Systems",
+          "item": "https://www.rayzenpower.com/services/hybrid-systems"
+        }
+      ]
+    })
+  }}
+/>
+
    <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
@@ -94,14 +111,15 @@ export default function HybridSystems() {
       </section>
 
       {/* Intro */}
-      <p
-        className="text-lg font-medium text-gray-700 max-w-4xl"
-        data-aos="fade-up"
-      >
-        Experience uninterrupted power with hybrid systems that intelligently
-        combine solar energy, battery storage, and grid power to deliver reliable,
-        efficient, and cost-effective electricity.
-      </p>
+   <p className="text-lg text-gray-600">
+  Hybrid systems integrate seamlessly with &nbsp;
+  <Link href="/services/solar-power-installation" className="text-[#d11a19] font-semibold">
+    solar power installations
+  </Link>
+ &nbsp; 
+  for maximum efficiency.
+</p>
+
 
       {/* Image + Content */}
       <section className="flex flex-col lg:flex-col items-center gap-10">
@@ -114,6 +132,7 @@ export default function HybridSystems() {
             sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-auto object-contain"
             alt="Hybrid power system combining solar, battery, and grid power"
+            priority
           />
         </div>
 
@@ -313,6 +332,35 @@ export default function HybridSystems() {
               </div>
             </section>
     </main>
+    <Script
+  id="faq-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a hybrid power system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A hybrid power system combines solar energy, battery storage, and grid power to ensure uninterrupted and efficient electricity supply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a hybrid system better than a solar system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, hybrid systems provide backup power during outages and optimize energy usage, making them more reliable than standard solar systems."
+          }
+        }
+      ]
+    })
+  }}
+/>
+
     </>
   );
 }

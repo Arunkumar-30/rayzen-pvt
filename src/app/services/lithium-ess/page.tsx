@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description:
     "Rayzen Power offers advanced Lithium Energy Storage Systems (ESS) for residential, commercial, and industrial applications. High performance, long life, and reliable backup power.",
   keywords:
-    "Lithium ESS, Lithium battery storage, energy storage system, battery backup, solar hybrid storage, Rayzen Power, renewable energy solutions",
+  [  "Lithium ESS, Lithium battery storage, energy storage system, battery backup, solar hybrid storage, Rayzen Power, renewable energy solutions",],
+    alternates: {
+  canonical: "https://rayzenpower.com/services/lithium-ess",
+},
+
   openGraph: {
     title: "Lithium Energy Storage Systems (ESS) - Rayzen Power",
     description:
@@ -50,30 +54,38 @@ export const metadata: Metadata = {
 export default function LithiumEnergyStorage() {
   return (
     <>
-     <Script
-        id="lithium-ess-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Lithium Energy Storage Systems (ESS)",
-            description:
-              "Rayzen Power offers advanced Lithium Energy Storage Systems (ESS) for residential, commercial, and industrial applications. High performance, long life, and reliable backup power.",
-            provider: {
-              "@type": "Organization",
-              name: "Rayzen Power Private Limited",
-              url: "https://www.rayzenpower.com",
-            },
-            areaServed: {
-              "@type": "Country",
-              name: "India",
-            },
-            serviceType: "Energy Storage System Installation",
-            url: "https://rayzenpower.com/services/lithium-ess",
-          }),
-        }}
-      />
+ <Script
+  id="breadcrumb-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rayzenpower.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rayzenpower.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lithium Energy Storage Systems",
+          "item": "https://rayzenpower.com/services/lithium-ess"
+        }
+      ]
+    })
+  }}
+/>
+
+
     <main className="max-w-7xl mx-auto px-6 lg:px-24 mb-12 space-y-10">
       {/* Title + CTA */}
       <section
@@ -94,7 +106,7 @@ export default function LithiumEnergyStorage() {
 
       {/* Intro */}
       <p
-        className="text-lg font-medium text-gray-700 max-w-4xl"
+        className="text-lg text-gray-600"
         data-aos="fade-up"
       >
         Store energy efficiently with next-generation lithium energy storage
@@ -274,6 +286,35 @@ export default function LithiumEnergyStorage() {
 </section>
 
     </main>
+    <Script
+  id="faq-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Lithium Energy Storage System?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Lithium Energy Storage System stores electrical energy using lithium-ion batteries for backup power, peak shaving, and solar integration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is lithium battery better than lead-acid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, lithium batteries offer longer life, faster charging, higher efficiency, and lower maintenance than lead-acid batteries."
+          }
+        }
+      ]
+    })
+  }}
+/>
+
     </>
   );
 }

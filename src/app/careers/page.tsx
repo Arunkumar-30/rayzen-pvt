@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "CCTV Jobs",
   ],
   robots: "index, follow",
+  alternates: {
+    canonical: "https://www.rayzenpower.com/careers",
+  },
   openGraph: {
     title: "Careers - Rayzen Power Private Limited",
     description:

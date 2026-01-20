@@ -6,7 +6,6 @@ import WhyChooseUs from "@/components/ui-section/WhyChooseUs";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-
 export const metadata: Metadata = {
   title: {
     default: "Rayzen Power Private Limited",
@@ -65,6 +64,7 @@ export default function Home() {
 
   <TestimonialSlider/>
    <Script
+    id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

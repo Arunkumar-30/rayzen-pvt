@@ -2,6 +2,7 @@ import CommonBannerComponent from "@/components/ui-section/CommonBanner";
 import Image from "next/image";
 import { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 
 
 // SEO Metadata
@@ -11,6 +12,9 @@ export const metadata: Metadata = {
     "Learn about Rayzen Power, a leading solar energy company in India. Discover our mission, vision, and innovative solar solutions for homes and businesses.",
   keywords:
     "Rayzen Power, solar energy, solar panels, lithium batteries, solar inverters, sustainable energy, renewable energy India",
+    alternates: {
+    canonical: "https://www.rayzenpower.com/about",
+  },
   openGraph: {
     title: "About Rayzen Power - Solar Energy Solutions in India",
     description:
@@ -101,7 +105,8 @@ const About = () => {
               data-aos-duration="2000"
             >
               Rayzen Power is a modern solar energy company providing high-quality
-              and efficient power solutions. We offer premium solar panels,
+              and efficient power solutions. We offer premium solar panels,&nbsp;<Link href="/services/solar-power-installation" className="text-[#d11a19] font-semibold">Solar 
+              Power Installation</Link>&nbsp;
               advanced lithium batteries, and reliable inverters for homes and
               businesses.
               <br />

@@ -3,9 +3,11 @@ import Aside from "@/components/ui-section/Aside";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Services - Rayzen Power Private Limited",
+ title: "Energy Solutions & Services | Rayzen Power Private Limited",
+
   description:
-    "Explore professional services by Rayzen Power Private Limited including Solar Power Installation, Hybrid Power Systems, Lithium Energy Storage, and Home Automation solutions.",
+  "Rayzen Power Private Limited offers professional solar power installation, hybrid systems, lithium energy storage, and smart energy solutions across India.",
+
   keywords: [
     "Rayzen Services",
     "Solar Power Installation",
@@ -17,6 +19,10 @@ export const metadata: Metadata = {
     "residential solar solutions",
   ],
   robots: "index, follow",
+  alternates: {
+  canonical: "https://www.rayzenpower.com/services",
+},
+
   openGraph: {
     title: "Our Services - Rayzen Power Private Limited",
     description:

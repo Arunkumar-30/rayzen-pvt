@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Get in touch with Rayzen Pvt Ltd for inquiries, support, or consultation. We are here to assist you with your solar, hybrid, and home automation solutions.",
   keywords: ["Contact Rayzen", "Rayzen Support", "Contact Us", "Solar", "Hybrid Systems", "Home Automation"],
   robots: "index, follow",
+  alternates: {
+    canonical: "https://www.rayzenpower.com/contact-us",
+  },
   openGraph: {
     title: "Contact Us - Rayzen Power Private Limited",
     description:
