@@ -125,10 +125,10 @@ const FooterComponent = () => {
             <li className="flex gap-2">
               <Image src="/footer/location.webp" className="w-6 h-6 object-contain" priority alt="Location" 
               width={24} height={24} />
-              <span>
+              <Link href="https://maps.app.goo.gl/qHZ4qwdVXCrGsj737" target="_blank">
                 1/264, 567, Pollachi Main Rd, Eachanari, Coimbatore,
                 Tamil Nadu - 641021
-              </span>
+              </Link>
             </li>
 
             <li className="flex gap-2">
