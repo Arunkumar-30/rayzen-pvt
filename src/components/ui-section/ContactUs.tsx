@@ -36,7 +36,7 @@ export default function ContactSection() {
 
     try {
       const res = await axios.post(
-        "https://web.rayzenpower.com/contact.php",
+        "https://www.web.rayzenpower.com/contact.php",
         formData,
         {
           headers: {

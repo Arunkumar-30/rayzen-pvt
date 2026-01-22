@@ -1,10 +1,30 @@
 <?php
 header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
+
+// Allow multiple origins
+$allowedOrigins = [
+    "https://web.rayzenpower.com",
+    "https://www.web.rayzenpower.com"
+];
+
+if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
+    header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
+}
+
+// Allow POST requests and headers
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Credentials: true"); // optional if you use cookies
 
-// Read JSON input
+// Handle OPTIONS preflight (important for POST JSON requests)
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+// -----------------------------
+// Your existing code here
+// -----------------------------
 $data = json_decode(file_get_contents("php://input"), true);
 
 if (!$data) {
@@ -39,7 +59,6 @@ if (!empty($errors)) {
 $to = "info@rayzenpower.com";
 $subject = "New Contact Form Submission - Rayzen Power";
 
-// IMPORTANT: Use domain email as sender
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8\r\n";
 $headers .= "From: Rayzen Power <no-reply@rayzenpower.com>\r\n";
