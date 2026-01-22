@@ -4,7 +4,9 @@ header("Content-Type: application/json");
 // Allow multiple origins
 $allowedOrigins = [
     "https://web.rayzenpower.com",
-    "https://www.web.rayzenpower.com"
+    "https://www.web.rayzenpower.com",
+    "https://rayzenpower.com",
+    "https://www.rayzenpower.com"
 ];
 
 if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
@@ -56,7 +58,7 @@ if (!empty($errors)) {
 }
 
 // Email setup
-$to = "info@rayzenpower.com";
+$to = "Selvam.arun100@gmail.com";
 $subject = "New Contact Form Submission - Rayzen Power";
 
 $headers  = "MIME-Version: 1.0\r\n";
