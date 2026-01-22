@@ -279,6 +279,44 @@ export default function SolarPower() {
 
         </div>
       </section>
+      {/* Image + Content */}
+<section className="flex flex-col lg:flex-row-reverse items-center gap-10 py-10">
+  
+  {/* Image (Right Side) */}
+  <div className="flex-1" data-aos="zoom-in">
+    <Image
+      src="/service/off-grid.webp"
+      width={600}
+      height={400}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className="w-full h-auto object-contain"
+      alt="Off-Grid Inverter"
+    />
+  </div>
+
+  {/* Content (Left Side) */}
+  <div className="flex-1 space-y-6" data-aos="fade-up">
+    <h2 className="josefin-sans text-xl lg:text-2xl font-semibold text-gray-800">
+      Off-Grid Inverter (1kw - 100kw)
+    </h2>
+
+    <ul className="space-y-4 list-disc pl-6">
+      {[
+        "Designed for complete energy independence without utility grid connection",
+        "Integrated battery management system for efficient power storage",
+        "Provides reliable backup during power outages",
+        "Supports multiple battery types including lithium and lead-acid",
+        "Ideal for remote areas, rural homes, and standalone solar systems",
+      ].map((text, i) => (
+        <li key={i} className="text-gray-800 font-medium">
+          {text}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+</section>
+
     
           {/* Product Section */}
       <section className="bg-[#f9fafb] py-16">
