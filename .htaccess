@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1️⃣ Redirect www.web.rayzenpower.com & web.rayzenpower.com to rayzenpower.com
+RewriteCond %{HTTP_HOST} ^(www\.)?web\.rayzenpower\.com$ [NC]
+RewriteRule ^(.*)$ https://rayzenpower.com/$1 [R=301,L]
+
+# 2️⃣ Redirect www.rayzenpower.com to rayzenpower.com
+RewriteCond %{HTTP_HOST} ^www\.rayzenpower\.com$ [NC]
+RewriteRule ^(.*)$ https://rayzenpower.com/$1 [R=301,L]
+
+# 3️⃣ Serve files if they exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 4️⃣ Otherwise, redirect all requests to index.html (Next.js SPA)
+RewriteRule ^ index.html [L]
+</IfModule>
