@@ -10,6 +10,7 @@ $response = array();
 // Sanitize the input
 $name = htmlspecialchars($data['fullname']);
 $email = htmlspecialchars($data['email']);
+$phone = htmlspecialchars($data['phone']);
 $service = htmlspecialchars($data['service']);
 $message = nl2br(htmlspecialchars($data['message']));
 
@@ -26,7 +27,8 @@ $body = '<html><body>';
 $body .= '<h2>Contact Form Submission</h2>';
 $body .= '<p><strong>Name:</strong> ' . $name . '</p>';
 $body .= '<p><strong>Email:</strong> ' . $email . '</p>';
-$body .= '<p><strong>Service:</strong> ' . $service . '</p>';
+$body .= '<p><strong>Email:</strong> ' . $email . '</p>';
+$body .= '<p><strong>Phone:</strong> ' . $phone . '</p>';
 $body .= '<p><strong>Message:</strong></p>';
 $body .= '<p>' . $message . '</p>';
 $body .= '</body></html>';
