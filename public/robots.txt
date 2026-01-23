@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://rayzenpower.com/
+Host: https://web.rayzenpower.com/
 
 # Sitemaps
-Sitemap: https://rayzenpower.com/sitemap.xml
+Sitemap: https://web.rayzenpower.com/sitemap.xml

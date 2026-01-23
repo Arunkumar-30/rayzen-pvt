@@ -1,5 +1,4 @@
 module.exports = {
-  siteUrl: "https://rayzenpower.com/",
+  siteUrl: "https://web.rayzenpower.com/",
   generateRobotsTxt: true,
-  sitemapSize: 7000,
 };
