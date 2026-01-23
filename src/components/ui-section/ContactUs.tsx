@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import CommonBannerComponent from "./CommonBanner";
 
 export default function ContactSection() {
@@ -36,11 +36,23 @@ export default function ContactSection() {
       });
 
       if (res.status === 200) {
-        setStatus({ type: "success", message: "Thank you! Your message has been sent successfully." });
+        setStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
         setFormData({ fullname: "", email: "", phone: "", service: "", message: "" });
       }
-    } catch (err: any) {
-      setStatus({ type: "error", message: "Server error. Please try again later." });
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        const error = err as AxiosError<{ error?: string[] }>;
+        if (error.response?.data?.error && Array.isArray(error.response.data.error)) {
+          setStatus({ type: "error", message: error.response.data.error.join(", ") });
+        } else {
+          setStatus({ type: "error", message: "Server error. Please try again later." });
+        }
+      } else {
+        setStatus({ type: "error", message: "Unexpected error occurred." });
+      }
     } finally {
       setLoading(false);
     }
