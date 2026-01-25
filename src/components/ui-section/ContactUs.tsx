@@ -53,7 +53,7 @@ export default function ContactSection() {
           <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]">
             <h3 className="text-xl font-medium">Location</h3>
             <p className="text-gray-600 mt-1">
-              K1/264, 567, Pollachi Main Rd, Eachanari, Coimbatore, Tamil Nadu - 641021
+             1/264, 567, Pollachi Main Rd, Eachanari, Coimbatore, Tamil Nadu - 641021
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#d11a19]">

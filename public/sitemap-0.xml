@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://web.rayzenpower.com/about</loc><lastmod>2026-01-23T08:42:18.466Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/careers</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/contact-us</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/services/cctv-security</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/services/home-automation</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/services/hybrid-systems</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/services/lithium-ess</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://web.rayzenpower.com/services/solar-power-installation</loc><lastmod>2026-01-23T08:42:18.468Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/about/</loc><lastmod>2026-01-25T06:52:56.978Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/careers/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/contact-us/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/services/cctv-security/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/services/home-automation/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/services/hybrid-systems/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/services/lithium-ess/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://web.rayzenpower.com/services/solar-power-installation/</loc><lastmod>2026-01-25T06:52:56.980Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
