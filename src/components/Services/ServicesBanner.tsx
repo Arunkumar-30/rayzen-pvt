@@ -40,7 +40,6 @@ export default function ServicesBanner() {
   const pathname = usePathname();
   const [fadeIn, setFadeIn] = useState(false);
 
-  // 🔥 REMOVE TRAILING SLASH
   const cleanPath = pathname.replace(/\/$/, "");
   const endUrl = cleanPath.split("/").pop();
 
@@ -52,7 +51,7 @@ export default function ServicesBanner() {
     };
 
   useEffect(() => {
-    setFadeIn(false);
+    // Just fade in after a small delay
     const timer = setTimeout(() => setFadeIn(true), 50);
     return () => clearTimeout(timer);
   }, [pathname]);
