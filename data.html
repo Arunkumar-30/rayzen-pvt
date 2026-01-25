@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Power Solutions | Rayzen Power</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  color:#222;
+  background:#fff;
+  line-height:1.7;
+}
+a{text-decoration:none}
+
+/* GLOBAL */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+.section h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:40px;
+}
+.light{background:#f9fafc}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#ffb703,#ffd166,#fff3c4);
+  padding:60px 20px;
+}
+.hero h1{
+  font-size:44px;
+  font-weight:700;
+}
+.hero h1 span{color:#0b5ed7}
+.hero h2{
+  margin:15px 0;
+  font-size:22px;
+}
+.hero p{margin:6px 0}
+.price{color:#0b5ed7;font-weight:700}
+
+/* CTA BUTTON */
+.btn-primary{
+  display:inline-block;
+  margin-top:30px;
+  padding:16px 38px;
+  background:#0b5ed7;
+  color:#fff;
+  border-radius:40px;
+  font-weight:600;
+  box-shadow:0 12px 30px rgba(11,94,215,.35);
+  animation:pulse 2s infinite;
+  transition:.3s;
+}
+.btn-primary:hover{
+  transform:translateY(-4px);
+  background:#084298;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(11,94,215,.5)}
+  70%{box-shadow:0 0 0 25px rgba(11,94,215,0)}
+  100%{box-shadow:0 0 0 0 rgba(11,94,215,0)}
+}
+
+/* WHY SOLAR */
+.features{
+  max-width:750px;
+  margin:auto;
+  list-style:none;
+}
+.features li{
+  background:#fff;
+  padding:16px 20px;
+  margin-bottom:15px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.features li:hover{
+  transform:translateX(12px);
+}
+
+/* SOLUTIONS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  padding:35px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.1);
+  transition:.35s;
+}
+.card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 30px 55px rgba(0,0,0,.15);
+}
+
+/* PRICING */
+.highlight{
+  background:linear-gradient(135deg,#0b5ed7,#003566);
+  color:#fff;
+  text-align:center;
+}
+.big-price{
+  font-size:28px;
+  margin:18px 0;
+  font-weight:600;
+}
+
+/* BRANDS */
+.brands{
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  line-height:2;
+}
+
+/* FORM */
+.form-section form{
+  max-width:520px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.form-section input,
+.form-section select{
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+.form-section input:focus,
+.form-section select:focus{
+  outline:none;
+  border-color:#0b5ed7;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+.btn-secondary{
+  display:inline-block;
+  padding:14px 30px;
+  background:#25d366;
+  color:#fff;
+  border-radius:40px;
+  margin:12px;
+  font-weight:600;
+}
+
+/* FINAL CTA */
+.final-cta{
+  background:linear-gradient(135deg,#ffb703,#ffd166);
+  text-align:center;
+  padding:80px 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .section h2{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Reduce your electricity bill by up to <span>90%</span><br>for the next 30 years!</h1>
+    <h2>On-Grid Solar System – Starting from <span class="price">₹78,000*</span></h2>
+    <p>📍 Coimbatore & Surrounding Areas</p>
+    <p>📞 Call Now: <strong>+91 98408 21382</strong></p>
+    <p>🟢 Free Site Survey Available</p>
+    <a href="#lead-form" class="btn-primary">Get Free Solar Consultation</a>
+  </div>
+</section>
+
+<!-- WHY SOLAR -->
+<section class="section">
+  <h2> Why Solar?</h2>
+  <ul class="features">
+    <li>A permanent solution to monthly electricity bills</li>
+    <li>Lower investment with government subsidy support</li>
+    <li>Increases property value</li>
+    <li>Solar panels last 25–30 years</li>
+    <li>Eco-friendly & sustainable energy</li>
+  </ul>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="section light">
+  <h2> Our Solar Solutions</h2>
+  <div class="cards">
+    <div class="card">
+      <h3> Home Solar</h3>
+      <p>1kW – 10kW systems</p>
+      <p>On-Grid / Hybrid options</p>
+    </div>
+    <div class="card">
+      <h3> Agriculture Solar</h3>
+      <p>Borewell & pump solar</p>
+      <p>Reduced EB bills</p>
+    </div>
+    <div class="card">
+      <h3> Commercial Solar</h3>
+      <p>Factory / Office / Hospital</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section highlight">
+  <h2> Pricing Highlight</h2>
+  <p class="big-price">Starting from ₹78,000*</p>
+  <p> Power support up to 30 years</p>
+  <small>*Price depends on site conditions</small>
+</section>
+
+<!-- WHY RAYZEN -->
+<section class="section">
+  <h2> Why Rayzen Power?</h2>
+  <ul class="features">
+    <li>Investment assistance from ₹25,000</li>
+    <li>Government subsidy support</li>
+    <li>Premium branded components</li>
+    <li>Expert installation team</li>
+    <li>30-year panel assurance</li>
+    <li>8–10 years inverter warranty</li>
+    <li>5 years maintenance support</li>
+  </ul>
+</section>
+
+<!-- BRANDS -->
+<section class="section light">
+  <h2> Trusted Brands</h2>
+  <p class="brands">
+    Adani • Tata Power • Waaree • Vikram • Havells • ABB • Sungrow • Growatt • Polycab • Finolex • JSW • Goldi
+  </p>
+</section>
+
+<!-- FORM -->
+<section class="section form-section" id="lead-form">
+  <h2> Free Site Survey</h2>
+  <form action="send-mail.php" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+    <input type="text" name="location" placeholder="Location" required>
+    <select name="type" required>
+      <option value="">Type of Solar</option>
+      <option>Home</option>
+      <option>Agriculture</option>
+      <option>Commercial</option>
+    </select>
+    <input type="text" name="bill" placeholder="Monthly Electricity Bill">
+    <button class="btn-primary" type="submit">Submit Enquiry</button>
+  </form>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="section light">
+  <h2> Service Areas</h2>
+  <p class="brands">
+    Coimbatore | Pollachi | Udumalpet | Erode | Tiruppur
+  </p>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section contact">
+  <h2> Contact Us</h2>
+  <p><strong>Rayzen Power Private Limited</strong></p>
+  <p>📞 +91 98408 21382</p>
+  <p>🌐 www.rayzenpower.com</p>
+  <p>📍 Pollachi Main Rd, Eachanari, Coimbatore – 641021</p>
+  <a href="tel:+919840821382" class="btn-secondary">Call Now</a>
+  <a href="https://wa.me/919840821382" class="btn-secondary">WhatsApp Now</a>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Install solar today & stop high electricity bills!</h2>
+  <a href="#lead-form" class="btn-primary">Book Free Site Survey</a>
+</section>
+
+</body>
+</html>
