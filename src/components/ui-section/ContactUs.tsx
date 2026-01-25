@@ -26,7 +26,7 @@ export default function ContactSection() {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await axios.post("https://web.rayzenpower.com/api/contact.php", formData, {
+      const res = await axios.post("https://rayzenpower.com/api/contact.php", formData, {
         headers: { "Content-Type": "application/json" },
       });
 
